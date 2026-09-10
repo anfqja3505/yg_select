@@ -24,9 +24,103 @@
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/var.css">
     <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/responsive.css">
     <script src="./scripts/index.js" defer></script>
 </head>
 <body>
-    
+    <header class="flex_row_between"><!-- =============================== 헤더 영역 -->
+        <ul class="menu_list flex_row_center">
+            <li>
+                <a href="#" class="artist active_menu">ARTIST</a>
+                <!-- artist hover 서브 메뉴 -->
+                <div class="artist_sub">
+                    <a href="#">BIGBANG</a>
+                    <a href="#">BLACKPINK</a>
+                    <a href="#">2NE1</a>
+                    <a href="#">BABYMONSTER</a>
+                    <a href="#">WINNER</a>
+                    <a href="#">TREASURE</a>
+                    <a href="#">AKMU</a>
+                    <a href="#">KRUNK</a>
+                    <a href="#">OTHER</a>
+                </div>
+            </li>
+            <li>
+                <a href="#" class="category">CATEGORY</a>
+                <!-- category hover 서브메뉴 -->
+                <div class="category_sub">
+                    <a href="#">TECH</a>
+                    <a href="#">CHEERING</a>
+                    <a href="#">MUSIC</a>
+                    <a href="#">FASHION</a>
+                    <a href="#">ACC</a>
+                    <a href="#">STATIONERY</a>
+                    <a href="#">MAGAZINES</a>
+                    <a href="#">ETC</a>
+                </div>
+            </li>
+            <li><a href="#" class="event">EVENT</a></li>
+            <li>
+                <a href="#" class="community">COMMUNITY</a>
+                <!-- community hover 서브메뉴 -->
+                <div class="community_sub">
+                    <a href="#">NEWS</a>
+                    <a href="#">NOTICE</a>
+                    <a href="#">FAQ</a>
+                    <a href="#">GUIDE</a>
+                    <a href="#">GUEST INQUIRY</a>
+                </div>
+            </li>
+            <li><a href="#" class="story">STORY</a></li>
+        </ul><!-- ======================= e:menu_list -->
+        <h1 id="brand_logo"><a href="index.html"><img src="./images/logo/YG SELECT_Signature_black.png" alt="ygselect"></a></h1>
+        <div class="menu_right flex_row_center"><!-- 우측 메뉴 영역 -->
+            <div class="join_login flex_row_center">
+                <a href="#" class="join_btn">JOIN</a>
+                <a href="#" class="login_btn">LOGIN</a>
+            </div>
+            <div class="icon_menu flex_row_center">
+                <select name="lang" id="lang">
+                    <option value="KRW">KOR | ₩</option>
+                    <option value="USD">USA | $</option>
+                    <option value="JPY">JPN | ¥</option>
+                    <option value="ERU">EUR | €</option>
+                </select>
+                <a href="#" class="basket"><img src="./images/icon/basket.svg" alt="장바구니"></a>
+                <button type="button" id="search_btn"><img src="./images/icon/search_btn.svg" alt="검색"></button>
+                <!-- (아래) 검색 클릭 시 나오는 검색창 -->
+                <div class="search_popup flex_row_between">
+                    <p class="close_btn"><img src="./images/icon/close_btn.svg" alt="닫기"></p>
+                    <div class="popular_search_pd flex_row_center">
+                        <div class="popular_pd_wrap">
+                            <h3>실시간 인기 상품</h2>
+                            <ul class="popular_pd"><!-- js 생성 및 복제 --></ul>
+                        </div>
+                        <div class="popular_search_wrap">
+                            <h3>인기검색어</h3>
+                            <ol class="popular_search"><!-- js 생성 및 복제 --></ol>
+                        </div>
+                    </div>
+                    <div class="search_input_recent">
+                        <div class="search_input">
+                            <input type="text" name="user_search" id="user_search" placeholder="검색어를 입력하세요." autofocus>
+                            <img src="./images/icon/search_btn.svg" alt="검색하기">
+                        </div>
+                        <div class="search_recent">
+                            <h3>최근검색어</h3>
+                            <button type="button" id="recent_delete">전체삭제</button>
+                        </div>
+                    </div>
+                    <p class="search_ad"><img src="./images/search/search_bnr.jpg" alt="빅뱅 응원봉 바로가기"></p>
+                </div><!-- e:search_popup(검색창) -->
+            </div>
+        </div>
+    </header>
+    <main><!-- ================================= 메인 영역 --> 
+
+    </main>
+    <footer><!-- =============================== 푸터 영역 -->
+
+    </footer>
 </body>
 </html>

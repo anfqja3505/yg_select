@@ -1,1 +1,1 @@
-//yg_select | index.js
+// YG SELECT | index.js

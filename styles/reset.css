@@ -7,13 +7,13 @@ em,strong,sub,sup,br,span,del,s,q,mark,code,img,a,
 table,thead,tbody,tfoot,tr,td,th {
     margin:0; padding:0; box-sizing:border-box;
     line-height:1; /* 피그마 행간 100% == 1 */
-    letter-spacing:0em; /* 피그마 자간 -2% == -0.02em */
+    letter-spacing:-0.02em; /* 피그마 자간 -2% == -0.02em */
     word-spacing:0;
     font-size:1em;/* 피그마 글자 크기 16px == 1em */
     font-weight:400;/* 피그마 글자 굵기 400 == regular */
     font-style:normal;
     color:#000;
-    font-family:'MaruBuri', serif;
+    font-family:'pretendard',sans-serif;
 }
 /* 개별 태그 초기값 */
 a {text-decoration:none;}
@@ -35,64 +35,4 @@ input[type=number]::-webkit-inner-spin-button {
 input[type=number] {
     -moz-appearance:none;
     margin:0;
-}
-/* 웹글꼴 */
-/* 마루부리 */
-@font-face {
-    font-family: 'MaruBuri';
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-ExtraLight.woff2);
-    font-weight: 200;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'MaruBuri';
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Light.woff2);
-    font-weight: 300;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'MaruBuri';
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.woff2);
-    font-weight: 400;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'MaruBuri';
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-SemiBold.woff2);
-    font-weight: 400;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'MaruBuri';
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Bold.woff2);
-    font-weight: 400;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'MaruBuri';
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Light.woff2);
-    font-weight: 400;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'MaruBuri';
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-ExtraLight.woff2);
-    font-weight: 400;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'MaruBuri';
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-SemiBold.woff2);
-    font-weight: 600;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'MaruBuri';
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Bold.woff2);
-    font-weight: 700;
-    font-display: swap;
 }

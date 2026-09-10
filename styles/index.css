@@ -1,1 +1,73 @@
-/*yg_select | index.js */
+/* YG SELECT | index.css */
+
+body {margin: 0 auto;}
+/* ============================================= (아래)헤더 */
+header {
+    position: relative;
+    display: flex;
+    padding: 18.5px 40px;
+}
+/* =================================좌측메뉴 */
+header .menu_list {gap: 32px;}
+header .menu_list li {}
+header .menu_list li .artist_sub,
+header .menu_list li .category_sub,
+header .menu_list li .community_sub {display: none;}
+header .menu_list li {}
+header .menu_list li a {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-medium);
+}
+/* =================================로고 */
+header #brand_logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px; height: 30px;
+}
+header #brand_logo a {display: block;}
+header #brand_logo a img {width: 100%;}
+/* =================================우측메뉴 */
+header .menu_right {gap: 30px;}
+header .menu_right * {font-size: var(--font-size-md);}
+header .menu_right a {}
+header .menu_right .join_login {gap: 10px;}
+header .menu_right .join_login .join_btn {
+    position: relative;
+}
+header .menu_right .join_login .join_btn::after {
+    content: ''; display: block;
+    background: #aaa; 
+    width: 1px; height: 14px;
+    position: absolute; top: 3px; left: 48px;
+}
+header .menu_right .join_login .login_btn {}
+header .menu_right .icon_menu {gap: 30px;}
+header .menu_right .icon_menu #lang {}
+header .menu_right .icon_menu .basket {width: 24px;}
+header .menu_right .icon_menu .basket img {width: 100%;}
+header .menu_right .icon_menu #search_btn {width: 24px;}
+header .menu_right .icon_menu #search_btn img {width: 100%;}
+/* ========================================검색창 */
+/* header .menu_right .icon_menu .search_popup {display: none;} */
+header .menu_right .icon_menu .search_popup .close_btn {}
+header .menu_right .icon_menu .search_popup .close_btn img {width: 100%;}
+header .menu_right .icon_menu .search_popup .popular_search_pd {}
+header .menu_right .icon_menu .search_popup .popular_search_pd h3 {}
+header .menu_right .icon_menu .search_popup .popular_search_pd .popular_pd_wrap {}
+header .menu_right .icon_menu .search_popup .popular_search_pd .popular_pd_wrap .popular_pd {}
+header .menu_right .icon_menu .search_popup .popular_search_pd .popular_search_wrap {}
+header .menu_right .icon_menu .search_popup .popular_search_pd .popular_search_wrap .popular_search {}
+
+header .menu_right .icon_menu .search_popup .search_input_recent {}
+header .menu_right .icon_menu .search_popup .search_input_recent .search_input {}
+header .menu_right .icon_menu .search_popup .search_input_recent .search_input input {}
+header .menu_right .icon_menu .search_popup .search_input_recent .search_input img {}
+header .menu_right .icon_menu .search_popup .search_input_recent .search_recent {}
+header .menu_right .icon_menu .search_popup .search_input_recent .search_recent h3 {}
+header .menu_right .icon_menu .search_popup .search_input_recent .search_recent #recent_delete {}
+
+header .menu_right .icon_menu .search_popup .search_ad {}
+header .menu_right .icon_menu .search_popup .search_ad img {width: 100%;}
+
