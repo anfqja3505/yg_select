@@ -14,6 +14,9 @@
     <meta name="description" content="YG 공식 쇼핑몰 YG SELECT! YG 아티스트 음반 및 공식 MD ONLINE SHOP.">
     <meta name="keywords" content="YG, BIGBANG, 빅뱅, BLACKPINK, 블랙핑크, BABYMONSTER, 베이비몬스터, TREASURE, 트레저, 응원봉, Light Stick, 포토카드, Photocard, 굿즈">
     <title>YG SELECT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
     <!--swiper 필수 css cdn 연결-->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
@@ -28,35 +31,44 @@
     <script src="./scripts/index.js" defer></script>
 </head>
 <body>
-    <header class="flex_row_between"><!-- =============================== 헤더 영역 -->
-        <ul class="menu_list flex_row_center">
+    <header class="flex_row_b_c"><!-- =============================== 헤더 영역 -->
+        <button type="button" id="t_m_menu_btn"><img src="./images/icon/t_m_menu_btn.svg" alt="메뉴"></button><!-- 태블릿, 모바일 메뉴 버튼 -->
+        <ul class="menu_list flex_row_c_c">
             <li>
-                <a href="#" class="artist active_menu">ARTIST</a>
+                <a href="#" class="artist">ARTIST</a>
                 <!-- artist hover 서브 메뉴 -->
                 <div class="artist_sub">
-                    <a href="#">BIGBANG</a>
-                    <a href="#">BLACKPINK</a>
-                    <a href="#">2NE1</a>
-                    <a href="#">BABYMONSTER</a>
-                    <a href="#">WINNER</a>
-                    <a href="#">TREASURE</a>
-                    <a href="#">AKMU</a>
-                    <a href="#">KRUNK</a>
-                    <a href="#">OTHER</a>
+                    <div class="sub_col">
+                        <a href="#">BIGBANG</a>
+                        <a href="#">2NE1</a>
+                        <a href="#">WINNER</a>
+                        <a href="#">AKMU</a>
+                        <a href="#">OTHER</a>
+                    </div>
+                    <div class="sub_col">
+                        <a href="#">BLACKPINK</a>
+                        <a href="#">BABYMONSTER</a>
+                        <a href="#">TREASURE</a>
+                        <a href="#">KRUNK</a>
+                    </div>
                 </div>
             </li>
             <li>
                 <a href="#" class="category">CATEGORY</a>
                 <!-- category hover 서브메뉴 -->
                 <div class="category_sub">
-                    <a href="#">TECH</a>
-                    <a href="#">CHEERING</a>
-                    <a href="#">MUSIC</a>
-                    <a href="#">FASHION</a>
-                    <a href="#">ACC</a>
-                    <a href="#">STATIONERY</a>
-                    <a href="#">MAGAZINES</a>
-                    <a href="#">ETC</a>
+                    <div class="sub_col">
+                        <a href="#">TECH</a>
+                        <a href="#">MUSIC</a>
+                        <a href="#">ACC</a>
+                        <a href="#">MAGAZINES</a>
+                    </div>
+                    <div class="sub_col">
+                        <a href="#">FASHION</a>
+                        <a href="#">CHEERING</a>
+                        <a href="#">STATIONERY</a>
+                        <a href="#">ETC</a>
+                    </div>
                 </div>
             </li>
             <li><a href="#" class="event">EVENT</a></li>
@@ -64,34 +76,39 @@
                 <a href="#" class="community">COMMUNITY</a>
                 <!-- community hover 서브메뉴 -->
                 <div class="community_sub">
-                    <a href="#">NEWS</a>
-                    <a href="#">NOTICE</a>
-                    <a href="#">FAQ</a>
-                    <a href="#">GUIDE</a>
-                    <a href="#">GUEST INQUIRY</a>
+                    <div class="sub_col">
+                        <a href="#">NEWS</a>
+                        <a href="#">FAQ</a>
+                        <a href="#">GUEST INQUIRY</a>
+                    </div>
+                    <div class="sub_col">
+                        <a href="#">NOTICE</a>
+                        <a href="#">GUIDE</a>
+                    </div>
                 </div>
             </li>
             <li><a href="#" class="story">STORY</a></li>
         </ul><!-- ======================= e:menu_list -->
         <h1 id="brand_logo"><a href="index.html"><img src="./images/logo/YG SELECT_Signature_black.png" alt="ygselect"></a></h1>
-        <div class="menu_right flex_row_center"><!-- 우측 메뉴 영역 -->
-            <div class="join_login flex_row_center">
+        <div class="menu_right flex_row_c_c"><!-- 우측 메뉴 영역 -->
+            <div class="join_login flex_row_c_c">
                 <a href="#" class="join_btn">JOIN</a>
                 <a href="#" class="login_btn">LOGIN</a>
             </div>
-            <div class="icon_menu flex_row_center">
+            <div class="icon_menu flex_row_c_c">
                 <select name="lang" id="lang">
                     <option value="KRW">KOR | ₩</option>
                     <option value="USD">USA | $</option>
                     <option value="JPY">JPN | ¥</option>
                     <option value="ERU">EUR | €</option>
                 </select>
+                <a href="#" class="login_btn"><img src="./images/icon/login_btn.svg" alt="로그인"></a><!-- 태블릿, 모바일 로그인 버튼 -->
                 <a href="#" class="basket"><img src="./images/icon/basket.svg" alt="장바구니"></a>
                 <button type="button" id="search_btn"><img src="./images/icon/search_btn.svg" alt="검색"></button>
                 <!-- (아래) 검색 클릭 시 나오는 검색창 -->
-                <div class="search_popup flex_row_between">
+                <div class="search_popup flex_row_b_s">
                     <p class="close_btn"><img src="./images/icon/close_btn.svg" alt="닫기"></p>
-                    <div class="popular_search_pd flex_row_center">
+                    <div class="popular_search_pd flex_row_c_c">
                         <div class="popular_pd_wrap">
                             <h3>실시간 인기 상품</h2>
                             <ul class="popular_pd"><!-- js 생성 및 복제 --></ul>
@@ -106,7 +123,7 @@
                             <input type="text" name="user_search" id="user_search" placeholder="검색어를 입력하세요." autofocus>
                             <img src="./images/icon/search_btn.svg" alt="검색하기">
                         </div>
-                        <div class="search_recent">
+                        <div class="search_recent flex_row_b_s">
                             <h3>최근검색어</h3>
                             <button type="button" id="recent_delete">전체삭제</button>
                         </div>
@@ -117,7 +134,31 @@
         </div>
     </header>
     <main><!-- ================================= 메인 영역 --> 
-
+        <!-- 1행 히어로 배너 -->
+        <section id="hero">
+            <div class="swiper hero_bnr">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#" class="flex_row_c_s">
+                            <div class="bnr_title_wrap1">
+                                <p>TREASURE THE STAGE 2026</p>
+                                <h3>THE WAV:LIVE</h3>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide"><!-- 추가예정 -->
+                        <a href="#">
+                            <div class="bnr_title_wrap2">
+                                <p>TREASURE THE STAGE 2026</p>
+                                <h3>THE WAV:LIVE</h3>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section><!-- e:#hero(히어로 배너) -->
+        <!-- 2행 아티스트 영역 -->
+        
     </main>
     <footer><!-- =============================== 푸터 영역 -->
 

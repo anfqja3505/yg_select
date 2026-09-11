@@ -1,36 +1,15 @@
 /* YG SELECT | var.css */
 :root{
-    --font-size-md: 1.125em; /* 18px 아이콘메뉴  */
-    --font-size-lg: 1.25em; /* 20px 메뉴카테고리  */
+    /* 데스크탑 */
+    --font-size-sm-d: 1em; /* 16px */
+    --font-size-md-d: 1.125em; /* 18px 아이콘메뉴  */
+    --font-size-lg-d: 1.25em; /* 20px 메뉴카테고리  */
+    /* 태블릿 */
+    --font-size-md-t: 1em /* 16px 아이콘메뉴 */
 
     --font-weight-bold: 800;
     --font-weight-medium: 500;
     --font-weight-light: 300;
-}
 
-/* 정렬(flex) */
-.flex_row_center {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-}
-.flex_row_between{
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* 활성화 */
-.active_menu {
-    position: relative;
-    font-weight:var(--font-weight-bold) !important;
-}
-.active_menu::after {
-    content: ''; display: block;
-    width: 100%; height: 3px;
-    background: #000;
-    position: absolute;
-    left: 0px; bottom: -3px;
+    --bg-disable: #ddd;
 }
