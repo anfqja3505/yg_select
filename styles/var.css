@@ -1,15 +1,26 @@
 /* YG SELECT | var.css */
 :root{
     /* 데스크탑 */
-    --font-size-sm-d: 1em; /* 16px */
-    --font-size-md-d: 1.125em; /* 18px 아이콘메뉴  */
-    --font-size-lg-d: 1.25em; /* 20px 메뉴카테고리  */
+    --font-size-xs-d: 0.875rem; /* 14px */
+    --font-size-sm-d: 1rem; /* 16px */
+    --font-size-md-d: 1.125rem; /* 18px 아이콘메뉴  */
+    --font-size-lg-d: 1.25rem; /* 20px 메뉴카테고리  */
+    --font-size-xl-d: 1.5rem; /* 24px 소제목 */
+    --font-size-xxl-d: 2.25rem; /* 36px 중제목 */
     /* 태블릿 */
-    --font-size-md-t: 1em /* 16px 아이콘메뉴 */
+    --font-size-sm-t: 0.875rem; /* 14px */
+    --font-size-md-t: 1rem; /* 16px 아이콘메뉴 */
+    --font-size-lg-t: 1.125rem; /* 18px */
+    --font-size-xl-t: 1.25rem; /* 20px */
+
+    /* 모바일 */
+    --font-size-md-m: 0.875rem; /* 14px 아이콘메뉴 */
+    --font-size-lg-m:1rem; /* 16px */
 
     --font-weight-bold: 800;
     --font-weight-medium: 500;
     --font-weight-light: 300;
 
     --bg-disable: #ddd;
+    --bg-basic: #111;
 }

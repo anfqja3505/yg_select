@@ -1,6 +1,9 @@
 /* YG SELECT | index.css */
 
-body {margin: 0 auto;}
+body {
+    margin: 0 auto;
+    
+}
 /* ==========================================================(아래)헤더 */
 header {
     background: #fff;
@@ -11,8 +14,18 @@ header {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
 }
 /* =================================좌측메뉴 */
-header #t_m_menu_btn {display: none;}/* 태블릿, 모바일 메뉴 기본 숨기기 */
+header #t_m_menu_btn {display: none;}/* 태블릿, 모바일 메뉴버튼 기본 숨기기 */
 header #t_m_menu_btn img {width: 100%;}
+header .m_t_menu { /* 태블릿 모바일 전체메뉴 */
+    display: none;
+}
+header .m_t_menu p {}
+header .m_t_menu p img {}
+header .m_t_menu .m_t_menu_list {}
+header .m_t_menu .m_t_menu_list li {}
+header .m_t_menu .m_t_menu_list li a {}
+header .m_t_menu .m_t_menu_list li a button {}
+
 header .menu_list {gap: 32px;}
 header .menu_list li {position: relative;}
 header .menu_list li .artist_sub,
@@ -114,7 +127,8 @@ header .menu_right .icon_menu .search_popup {
     opacity: 0;
     transition: all 0.3s ease;
     visibility: hidden;
-    z-index: 500
+    z-index: 500;
+    gap: 50px;
 }
 header .menu_right .icon_menu .search_popup.active {
     opacity: 1;
@@ -125,54 +139,87 @@ header .menu_right .icon_menu .search_popup .close_btn {
     position: absolute; top: 30px; right: 60px;
 }
 header .menu_right .icon_menu .search_popup .close_btn img {width: 100%;}
-header .menu_right .icon_menu .search_popup .popular_search_pd {gap: 50px;}
-header .menu_right .icon_menu .search_popup .popular_search_pd h3 {}
-header .menu_right .icon_menu .search_popup .popular_search_pd .popular_pd_wrap {position: relative;}
+header .menu_right .icon_menu .search_popup .popular_search_pd {gap: 100px;}
+header .menu_right .icon_menu .search_popup .popular_search_pd li {
+    width: 100%;
+    overflow: hidden; 
+    min-width: 0;
+}
+header .menu_right .icon_menu .search_popup .popular_search_pd li a {
+    font-size: var(--font-size-sm-d);   
+    font-weight: var(--font-weight-light);
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-width: 0;
+}
+header .menu_right .icon_menu .search_popup h3 {
+    font-size: var(--font-size-lg-d); 
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 15px;
+}
+header .menu_right .icon_menu .search_popup .popular_search_pd {}
+header .menu_right .icon_menu .search_popup .popular_search_pd .popular_pd_wrap {position: relative; width: 160px;}
 header .menu_right .icon_menu .search_popup .popular_search_pd .popular_pd_wrap::after {
     content: ''; display: block;
     background-color: var(--bg-disable);
-    width: 1px; height: 200px;
-    position: absolute; top: 10px; right: -25px;
+    width: 1px; height: 220px;
+    position: absolute; top: 10px; right: -45px;
 }
-header .menu_right .icon_menu .search_popup .popular_search_pd .popular_pd_wrap .popular_pd {}
-header .menu_right .icon_menu .search_popup .popular_search_pd .popular_search_wrap {}
-header .menu_right .icon_menu .search_popup .popular_search_pd .popular_search_wrap .popular_search {}
+header .menu_right .icon_menu .search_popup .popular_search_pd .popular_pd_wrap .popular_pd {gap: 15px;}
+header .menu_right .icon_menu .search_popup .popular_search_pd .popular_search_wrap { width: max-content;}
+header .menu_right .icon_menu .search_popup .popular_search_pd .popular_search_wrap .popular_search {gap: 15px;}
 
-header .menu_right .icon_menu .search_popup .search_input_recent {}
-header .menu_right .icon_menu .search_popup .search_input_recent .search_input {margin-bottom: 20px;}
-header .menu_right .icon_menu .search_popup .search_input_recent .search_input input {}
+header .menu_right .icon_menu .search_popup .search_input_recent {
+    width: 600px;
+}
+header .menu_right .icon_menu .search_popup .search_input_recent .search_input {
+    margin-bottom: 20px;
+    display: flex;            
+    align-items: center; 
+    justify-content: space-between;    
+    border-bottom: solid 1px var(--bg-disable);
+}
+header .menu_right .icon_menu .search_popup .search_input_recent .search_input input {
+    height: 44px; line-height: 44px; 
+    flex: 1;
+}
+header .menu_right .icon_menu .search_popup .search_input_recent .search_input input::placeholder{font-size: var(--font-size-md-d);}
 header .menu_right .icon_menu .search_popup .search_input_recent .search_input img {}
-header .menu_right .icon_menu .search_popup .search_input_recent .search_recent {}
-header .menu_right .icon_menu .search_popup .search_input_recent .search_recent h3 {}
-header .menu_right .icon_menu .search_popup .search_input_recent .search_recent #recent_delete {}
+header .menu_right .icon_menu .search_popup .search_input_recent .search_recent {width: 100%}
+header .menu_right .icon_menu .search_popup .search_input_recent .search_recent #recent_delete {
+    font-size: var(--font-size-sm-d);
+    font-weight: var(--font-weight-light);
+}
 
-header .menu_right .icon_menu .search_popup .search_ad {width: 500px; height: 280px;}
-header .menu_right .icon_menu .search_popup .search_ad img {width: 100%;}
+header .menu_right .icon_menu .search_popup .search_ad {max-width: 500px; height: 280px;}
+header .menu_right .icon_menu .search_popup .search_ad img {width: 100%; height: 100%; /* aspect-ratio: 500 / 280; */}
 /* ===============================================================================(아래)메인 */
 main {}
-/* ===================================================히어로배너 */
-main #hero {}
-main #hero .hero_bnr {}
-main #hero .hero_bnr .swiper-wrapper {}
-main #hero .hero_bnr .swiper-wrapper .swiper-slide {
+/* =================================================== 1행 히어로배너 */
+main #hero_sec {}
+main #hero_sec .hero_bnr {}
+main #hero_sec .hero_bnr .swiper-wrapper {}
+main #hero_sec .hero_bnr .swiper-wrapper .swiper-slide {
     height: 900px;
 }
-main #hero .hero_bnr .swiper-wrapper .swiper-slide a {
-    background-image: url(../images/hero/hero4.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 0px -100px;
+main #hero_sec .hero_bnr .swiper-wrapper .swiper-slide a {
     display: block;
     height: 100%;
     position: relative;
+    background-image: url('../images/hero/hero4.png'); 
+    background-repeat: no-repeat;
+    background-size: cover;       
+    background-position: center; 
 }
-main #hero .hero_bnr .swiper-wrapper .swiper-slide a .bnr_title_wrap1 {
+main #hero_sec .hero_bnr .swiper-wrapper .swiper-slide a .bnr_title_wrap1 {
     position: absolute; top: 0; left: 50%; 
     transform: translate(-50%, 100px);
     text-align: center;
 }
-main #hero .hero_bnr .swiper-wrapper .swiper-slide a .bnr_title_wrap1 * {color: #fff;}
-main #hero .hero_bnr .swiper-wrapper .swiper-slide a .bnr_title_wrap1 p {
+main #hero_sec .hero_bnr .swiper-wrapper .swiper-slide a .bnr_title_wrap1 * {color: #fff;}
+main #hero_sec .hero_bnr .swiper-wrapper .swiper-slide a .bnr_title_wrap1 p {
     margin-bottom: 20px;
     font-size: 1.75em;
     font-weight: var(--font-weight-light);
@@ -180,7 +227,7 @@ main #hero .hero_bnr .swiper-wrapper .swiper-slide a .bnr_title_wrap1 p {
     transform: translateY(-30px);
     transition: all 1s ease 0.5s;
 }
-main #hero .hero_bnr .swiper-wrapper .swiper-slide a .bnr_title_wrap1 h3 {  
+main #hero_sec .hero_bnr .swiper-wrapper .swiper-slide a .bnr_title_wrap1 h3 {  
     font-weight: var(--font-weight-bold);
     font-family: 'Noto Serif KR';
     font-size: 4em;
@@ -188,15 +235,39 @@ main #hero .hero_bnr .swiper-wrapper .swiper-slide a .bnr_title_wrap1 h3 {
     transform: translateY(-30px);
     transition: all 1s ease;
 }
-main #hero .hero_bnr .swiper-wrapper .swiper-slide-active a .bnr_title_wrap1 p,
-main #hero .hero_bnr .swiper-wrapper .swiper-slide-active a .bnr_title_wrap1 h3 {
+main #hero_sec .hero_bnr .swiper-wrapper .swiper-slide-active a .bnr_title_wrap1 p,
+main #hero_sec .hero_bnr .swiper-wrapper .swiper-slide-active a .bnr_title_wrap1 h3 {
     opacity: 1;
     transform: translateY(0);
 }
-main #hero .hero_bnr .swiper-wrapper .swiper-slide a .bnr_title_wrap2 {}
-main #hero .hero_bnr .swiper-wrapper .swiper-slide a .bnr_title_wrap * {color: #fff;}
-main #hero .hero_bnr .swiper-wrapper .swiper-slide a .bnr_title_wrap2 p {}
-main #hero .hero_bnr .swiper-wrapper .swiper-slide a .bnr_title_wrap2 h3 {}
+main #hero_sec .hero_bnr .swiper-wrapper .swiper-slide a .bnr_title_wrap2 {}
+main #hero_sec .hero_bnr .swiper-wrapper .swiper-slide a .bnr_title_wrap * {color: #fff;}
+main #hero_sec .hero_bnr .swiper-wrapper .swiper-slide a .bnr_title_wrap2 p {}
+main #hero_sec .hero_bnr .swiper-wrapper .swiper-slide a .bnr_title_wrap2 h3 {}
+
+/* =============================================== 2행 아티스트 */
+main #aritst_sec {padding-top: 150px;}
+main #aritst_sec .artist_wrap {
+    background: var(--bg-basic);
+    padding: 150px 0;
+}
+main #aritst_sec .artist_wrap * {
+    color: #fff;
+    text-align: center;
+    font-weight: var(--font-weight-bold);
+}
+main #aritst_sec .artist_wrap h2 {
+    font-size: var(--font-size-xxl-d);
+    margin-bottom: 70px;
+}
+main #aritst_sec .artist_wrap .artist_swiper {}
+main #aritst_sec .artist_wrap .artist_swiper .swiper-wrapper {}
+main #aritst_sec .artist_wrap .artist_swiper .swiper-wrapper .swiper-slide {width: 800px; height: 500px;}
+main #aritst_sec .artist_wrap .artist_swiper .swiper-wrapper .swiper-slide a {}
+main #aritst_sec .artist_wrap .artist_swiper .swiper-wrapper .swiper-slide a img {width: 100%;
+margin-bottom: 20px;}
+main #aritst_sec .artist_wrap .artist_swiper .swiper-wrapper .swiper-slide a h3 {font-size: var(--font-size-xl-d);}
+
 
 
 
@@ -231,4 +302,9 @@ main #hero .hero_bnr .swiper-wrapper .swiper-slide a .bnr_title_wrap2 h3 {}
     justify-content: space-between;
     align-items: center;
 }
-
+.flex_col_b_s {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
