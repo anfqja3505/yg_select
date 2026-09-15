@@ -47,5 +47,40 @@ const artistDB = [
         name: "BABYMONSTER",
         src: "./images/artist/babymonster.jpg",
         link: "#",
+    },
+    {
+        name: "AKMU",
+        src: "./images/artist/akmu.jpg",
+        link: "#",
+    },
+    {
+        name: "2NE1",
+        src: "./images/artist/2ne1.jpg",
+        link: "#",
+    },
+    {
+        name: "EUNJIONE",
+        src: "./images/artist/eunjiwon.jpg",
+        link: "#",
     }
 ];
+
+//==========================================NEW 상품 DB
+const newProductDB = {
+    bigbang: [
+        { src: "./images/new/bigbang/newpd1.jpg", name: "BIGBANG TOUR REUSABLE BAG_L", price: "10,000원", link: "#" },
+        { src: "./images/new/bigbang/newpd2.jpg", name: "BIGBANG TOUR REUSABLE BAG_M", price: "8,000원", link: "#" },
+        { src: "./images/new/bigbang/newpd3.jpg", name: "BIGBANG TOUR SLOGAN TOWEL", price: "18,000원", link: "#" },
+        { src: "./images/new/bigbang/newpd4.jpg", name: "BIGBANG OFFICIAL LIGHT STICK V.4", price: "35,000원", link: "#" },
+        { src: "./images/new/bigbang/newpd5.jpg", name: "BIGBANG10 THE COLLECTION: A TO Z", price: "50,000원", link: "#" },
+        { src: "./images/new/bigbang/newpd6.jpg", name: "BIGBANG ALBUM BADGE COLLECTION", price: "24,000원", link: "#" }
+    ],
+    blackpink: [
+        { src: "./images/new/blackpink/bpnewpd1.jpg", name: "[BP Heritage] Chambit Norigae Keyring_PINK", price: "30,000원", link: "#" },
+        { src: "./images/new/blackpink/bpnewpd2.jpg", name: "[BP Heritage] Chambit Norigae Keyring_BLACK", price: "30,000원", link: "#" },
+        { src: "./images/new/blackpink/bpnewpd3.jpg", name: "[BP Heritage] Pink Moon Jar", price: "100,000원", link: "#" },
+        { src: "./images/new/blackpink/bpnewpd4.jpg", name: "[BP Heritage] Punggyeong Wind Chime", price: "80,000원", link: "#" },
+        { src: "./images/new/blackpink/bpnewpd5.jpg", name: "[KOREAEDITION] BLACKPINK KEYRING", price: "16,000원", link: "#" },
+        { src: "./images/new/blackpink/bpnewpd6.jpg", name: "[KOREAEDITION] BLACKPINK T-SHIRT_MUGUNGHWA", price: "52,000원", link: "#" }
+    ]
+};

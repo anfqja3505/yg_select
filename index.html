@@ -17,6 +17,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+    <!-- GSAP 메인 라이브러리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <!-- ScrollTrigger 플러그인 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
     <!--swiper 필수 css cdn 연결-->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
@@ -36,7 +40,6 @@
         <button type="button" id="t_m_menu_btn"><img src="./images/icon/t_m_menu_btn.svg" alt="메뉴"></button><!-- 태블릿, 모바일 메뉴 버튼 -->
         <!-- (아래) 위 버튼 클릭 시 나오는 전체 메뉴 -->
         <div class="m_t_menu">
-            <p class="m_t_close_btn"><button type="button" id="m_t_close_btn-deep"><img src="./images/icon/close_btn.svg" alt="메뉴 닫기"></button></p>
             <ul class="m_t_menu_list">
                 <li><a href="#">ARTIST</a><button type="button" id="artist_btn"><img src="./images/icon/menu_open_btn.svg" alt="메뉴열기"></button></li>
                 <li><a href="#">CATEGORY</a><button type="button" id="category_btn"><img src="./images/icon/menu_open_btn.svg" alt="메뉴열기"></button></li>
@@ -168,7 +171,7 @@
                     </div>
                 </div>
             </div>
-        </section><!-- e:#hero(히어로 배너) -->
+        </section><!-- e:#hero_sec(히어로 배너) -->
         <!-- 2행 아티스트 영역 -->
         <section id="aritst_sec">
             <div class="artist_wrap">
@@ -179,7 +182,39 @@
                     </ul>
                 </div>
             </div>
-        </section>
+        </section><!-- e:#aritst_sec(아티스트) -->
+        <section id="new_sec">
+            <div class="new_wrap">
+                <h2>NEW</h2>
+                <ul class="new_tab_menu flex_row_c_c"><!-- 탭메뉴 -->
+                    <li><button type="button" id="new_bigbang_tab_btn" class="active">BIGBANG</button></li>
+                    <li><button type="button" id="new_blackpink_tab_btn">BLACKPINK</button></li>
+                    <li><button type="button" id="new_treasure_tab_btn">TREASURE</button></li>
+                    <li><button type="button" id="new_babymonster_tab_btn">BABYMONSTER</button></li>
+                    <li><button type="button" id="new_winner_tab_btn">WINNER</button></li>
+                </ul>
+                <div class="new_content flex_row_c_s active"><!-- 배너 + 신상품(빅뱅) -->
+                    <div class="artist_banner"><!-- 배너 -->
+                        <a href="#">
+                            <img src="./images/new/bigbang/banner.jpg" alt="빅뱅 신상품 바로가기">
+                            <span class="banner_text">BIGBANG</span>
+                            <span class="more_btn">more  &gt;</span>
+                        </a>
+                    </div>
+                    <ul class="new_product_list" data-artist="bigbang"><!-- JS 복제 --></ul><!-- 신상품 -->
+                </div>
+                <div class="new_content flex_row_c_s"><!-- 배너 + 신상품(블랙핑크) -->
+                    <div class="artist_banner"><!-- 배너 -->
+                        <a href="#">
+                            <img src="./images/new/blackpink/banner.jpg" alt="빅뱅 신상품 바로가기">
+                            <span class="banner_text white">BLACKPINK</span>
+                            <span class="more_btn">more  &gt;</span>
+                        </a>
+                    </div>
+                    <ul class="new_product_list" data-artist="blackpink"><!-- JS 복제 --></ul><!-- 신상품 -->
+                </div>
+            </div><!-- e:new_wrap -->
+        </section><!-- e:#new_sec(신상품) -->
         
     </main>
     <footer><!-- =============================== 푸터 영역 -->
