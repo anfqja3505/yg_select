@@ -12,7 +12,7 @@
         transform: translateX(-50px);
         transition: all 0.3s;
         position: fixed;
-        top: 59px; left: 0;
+        top: 58px; left: 0;
         width:400px; height: 1200px;
         background: #fff;
         padding: 106px 50px;
@@ -90,7 +90,27 @@
     main #hero_sec .hero_bnr .swiper-wrapper .swiper-slide {height: 730px;}
     main #hero_sec .hero_bnr .swiper-wrapper .swiper-slide a .bnr_title_wrap1 h3 {font-size: 3em;}
     main #hero_sec .hero_bnr .swiper-wrapper .swiper-slide a .bnr_title_wrap1 p {font-size: 1.375em;}
+    /* ===================================================아티스트 */
+    main #aritst_sec {padding-top: 70px;}
+    main #aritst_sec .artist_wrap {padding: 120px 0;}
+    main #aritst_sec .artist_wrap h2 {
+    font-size: var(--font-size-xxxl-t);
+    margin-bottom: 40px;
+    }
+    main #aritst_sec .artist_wrap .artist_swiper {
+        height: max-content;
+        overflow: hidden;
+    }
+    main #aritst_sec .artist_wrap .artist_swiper .swiper-wrapper .swiper-slide {width: 600px ; height: 100%}
+    main #aritst_sec .artist_wrap .artist_swiper .swiper-wrapper .swiper-slide a {}
+    main #aritst_sec .artist_wrap .artist_swiper .swiper-wrapper .swiper-slide a img {
+        width: 100%;
+        height: 366px;
+        margin-bottom: 20px;
+    }
+    main #aritst_sec .artist_wrap .artist_swiper .swiper-wrapper .swiper-slide a h3 {font-size: var(--font-size-xxl-t);}
 }
+
 /* ============================================================================= 태블릿 -> 모바일 */
 @media screen and (max-width:680px) {
     header {
@@ -156,4 +176,19 @@
     main #hero_sec .hero_bnr .swiper-wrapper .swiper-slide a .bnr_title_wrap1 {top: 70px;}
     main #hero_sec .hero_bnr .swiper-wrapper .swiper-slide a .bnr_title_wrap1 h3 {font-size: 2.625em;}
     main #hero_sec .hero_bnr .swiper-wrapper .swiper-slide a .bnr_title_wrap1 p {font-size: 1.25em;}
+        /* ===================================================아티스트 */
+    main #aritst_sec {padding-top: 50px;}
+    main #aritst_sec .artist_wrap {padding: 70px 0;}
+    main #aritst_sec .artist_wrap h2 {
+    font-size: var(--font-size-xxl-m);
+    margin-bottom: 30px;
+    }
+    main #aritst_sec .artist_wrap .artist_swiper .swiper-wrapper .swiper-slide {width: 300px ; height: 100%}
+    main #aritst_sec .artist_wrap .artist_swiper .swiper-wrapper .swiper-slide a {}
+    main #aritst_sec .artist_wrap .artist_swiper .swiper-wrapper .swiper-slide a img {
+        width: 100%;
+        height: 177px;
+        margin-bottom: 10px;
+    }
+    main #aritst_sec .artist_wrap .artist_swiper .swiper-wrapper .swiper-slide a h3 {font-size: var(--font-size-lg-m);}
 }

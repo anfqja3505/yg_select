@@ -250,6 +250,7 @@ main #aritst_sec {padding-top: 150px;}
 main #aritst_sec .artist_wrap {
     background: var(--bg-basic);
     padding: 150px 0;
+
 }
 main #aritst_sec .artist_wrap * {
     color: #fff;
@@ -260,12 +261,18 @@ main #aritst_sec .artist_wrap h2 {
     font-size: var(--font-size-xxl-d);
     margin-bottom: 70px;
 }
-main #aritst_sec .artist_wrap .artist_swiper {}
-main #aritst_sec .artist_wrap .artist_swiper .swiper-wrapper {}
-main #aritst_sec .artist_wrap .artist_swiper .swiper-wrapper .swiper-slide {width: 800px; height: 500px;}
+main #aritst_sec .artist_wrap .artist_swiper {
+    height: max-content;
+    overflow: hidden;
+}
+main #aritst_sec .artist_wrap .artist_swiper .swiper-wrapper {height: 100%;}
+main #aritst_sec .artist_wrap .artist_swiper .swiper-wrapper .swiper-slide {width: 800px ; height: 100%}
 main #aritst_sec .artist_wrap .artist_swiper .swiper-wrapper .swiper-slide a {}
-main #aritst_sec .artist_wrap .artist_swiper .swiper-wrapper .swiper-slide a img {width: 100%;
-margin-bottom: 20px;}
+main #aritst_sec .artist_wrap .artist_swiper .swiper-wrapper .swiper-slide a img {
+    width: 100%; height: 500px;
+    margin-bottom: 20px; 
+    object-fit: cover;
+}
 main #aritst_sec .artist_wrap .artist_swiper .swiper-wrapper .swiper-slide a h3 {font-size: var(--font-size-xl-d);}
 
 

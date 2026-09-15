@@ -22,6 +22,11 @@ const artistSwiper = new Swiper('.artist_swiper',{// 아티스트 swiper
     spaceBetween: 50,
     centeredSlides: true,
     loop:true,
+    loopedSlides: 3,
+    speed:2500,
+    autoplay: {
+        delay: 1000,          
+    },
 })
 
 search_btn.addEventListener('click',()=>{/* 검색버튼 */
