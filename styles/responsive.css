@@ -105,6 +105,57 @@
         margin-bottom: 20px;
     }
     main #aritst_sec .artist_wrap .artist_swiper .swiper-wrapper .swiper-slide a h3 {font-size: var(--font-size-xxl-t);}
+
+    /* =========================================================== 3행 NEW */
+    main #new_sec {}
+    main #new_sec .new_wrap {padding-top: 70px; height: 1220px; position: relative;}
+    main #new_sec .new_wrap h2 {
+        font-size: var(--font-size-xxxl-t);
+        margin-bottom: 40px;
+    }
+    /* ================================================탭메뉴 */    
+    main #new_sec .new_wrap .new_tab_menu {
+        gap: 30px;
+        margin-bottom: 25px;
+    }
+    main #new_sec .new_wrap .new_tab_menu li button {font-size: var(--font-size-lg-t);}
+    main #new_sec .new_wrap .new_tab_menu li button::after {
+        height: 5px;
+        background: #000;
+        bottom: -7px;
+    }
+
+    /* ================================================컨텐츠 */
+    main #new_sec .new_wrap .new_content {
+        gap: 10px;
+        top: 204px;
+        height: 700px;
+    } 
+
+    /* ================================================배너 */
+    main #new_sec .new_wrap .new_content .artist_banner a {
+        width: 480px; height: 700px;
+    }
+    main #new_sec .new_wrap .new_content .artist_banner a .banner_text {
+        font-size: 3.375rem;
+        bottom: 10px; left: 30px;
+    }
+
+    /* ================================================상품리스트 */
+    main #new_sec .new_wrap .new_content .new_product_list {
+        display: flex; flex-flow: row wrap;
+        gap: 15px 20px;
+        height: 100%;
+    }
+    main #new_sec .new_wrap .new_content .new_product_list li {flex: 0 0 calc(50% - 20px);}
+    main #new_sec .new_wrap .new_content .new_product_list li a {}
+    main #new_sec .new_wrap .new_content .new_product_list li a .new_thum {width: 100%; margin-bottom: 10px;}
+    main #new_sec .new_wrap .new_content .new_product_list li a .new_thum img {width: 100%;}
+    main #new_sec .new_wrap .new_content .new_product_list li a .new_name {
+        font-size: var(--font-size-sm-t);
+        margin-bottom: 5px;
+    }
+    main #new_sec .new_wrap .new_content .new_product_list li a .new_price {font-size: var(--font-size-md-t);}
 }
 
 /* ============================================================================= 태블릿 -> 모바일 */
@@ -112,7 +163,7 @@
     header {
         padding: 10px 15px;
     }
-/* =================================전체메뉴 */
+    /* =================================전체메뉴 */
     header #t_m_menu_btn {display: block;}/* 태블릿, 모바일 메뉴 기본 숨기기 */
     header .m_t_menu { /* 태블릿 모바일 전체메뉴 */
         width: 250px; height: 1000px;

@@ -72,3 +72,9 @@
     justify-content: space-between;
     align-items: flex-start;
 }
+
+/* ===============================스크롤 */
+.active_sticky {
+    position: fixed;
+    top: 100px;
+}

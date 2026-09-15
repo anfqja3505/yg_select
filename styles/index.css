@@ -320,6 +320,7 @@ main #new_sec .new_wrap .new_content {/* 숨기기 */
     top: 307px;
     left: 0;
     width: 100%;
+    height: max-content;
 } 
 main #new_sec .new_wrap .new_content.active {/* 보이기 */
     opacity: 1; 
@@ -367,14 +368,18 @@ main #new_sec .new_wrap .new_content .new_product_list {
     transform: translateX(300px); transition: all 0.5s;
 }
 main #new_sec .new_wrap .new_content.active .new_product_list {transform: translateX(0);}
-main #new_sec .new_wrap .new_content .new_product_list li {flex: 0 0 calc(33.333% - 14px);}
-main #new_sec .new_wrap .new_content .new_product_list li a {}
+main #new_sec .new_wrap .new_content .new_product_list li {flex: 0 0 calc(33.333% - 14px); min-width: 0;}
+main #new_sec .new_wrap .new_content .new_product_list li a {width: 100%;}
 main #new_sec .new_wrap .new_content .new_product_list li a .new_thum {width: 100%; margin-bottom: 10px;}
 main #new_sec .new_wrap .new_content .new_product_list li a .new_thum img {width: 100%;}
 main #new_sec .new_wrap .new_content .new_product_list li a .new_name {
     font-weight: var(--font-weight-light);
     font-size: var(--font-size-sm-d);
     margin-bottom: 7px;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 main #new_sec .new_wrap .new_content .new_product_list li a .new_price {font-weight: var(--font-weight-bold); font-size: var(--font-size-md-d);}
 
