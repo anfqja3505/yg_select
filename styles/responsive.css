@@ -126,36 +126,71 @@
     }
 
     /* ================================================컨텐츠 */
-    main #new_sec .new_wrap .new_content {
+    main #new_sec .new_wrap .new_content_wrap .new_content_wrap {}
+    main #new_sec .new_wrap .new_content_wrap .new_content {
         gap: 10px;
         top: 204px;
-        height: 700px;
+        height: 951px
     } 
 
     /* ================================================배너 */
-    main #new_sec .new_wrap .new_content .artist_banner a {
-        width: 480px; height: 700px;
+    main #new_sec .new_wrap .new_content_wrap .new_content .artist_banner {flex: 0.934}
+    main #new_sec .new_wrap .new_content_wrap .new_content .artist_banner a {
+        width: 480px; height: 951px;
     }
-    main #new_sec .new_wrap .new_content .artist_banner a .banner_text {
+    main #new_sec .new_wrap .new_content_wrap .new_content .artist_banner .new_bigbang {
+        background-image: url(../images/new/bigbang/banner_t.jpg);
+    }
+    main #new_sec .new_wrap .new_content_wrap .new_content .artist_banner .new_blackpink {
+        background-image: url(../images/new/blackpink/banner_t.jpg);
+    }
+    main #new_sec .new_wrap .new_content_wrap .new_content .artist_banner a .banner_text {
         font-size: 3.375rem;
         bottom: 10px; left: 30px;
     }
 
     /* ================================================상품리스트 */
-    main #new_sec .new_wrap .new_content .new_product_list {
+    main #new_sec .new_wrap .new_content_wrap .new_content .new_product_list {
         display: flex; flex-flow: row wrap;
         gap: 15px 20px;
         height: 100%;
+        flex: 1
     }
-    main #new_sec .new_wrap .new_content .new_product_list li {flex: 0 0 calc(50% - 20px);}
-    main #new_sec .new_wrap .new_content .new_product_list li a {}
-    main #new_sec .new_wrap .new_content .new_product_list li a .new_thum {width: 100%; margin-bottom: 10px;}
-    main #new_sec .new_wrap .new_content .new_product_list li a .new_thum img {width: 100%;}
-    main #new_sec .new_wrap .new_content .new_product_list li a .new_name {
+    main #new_sec .new_wrap .new_content_wrap .new_content .new_product_list li {flex: 0 0 calc(50% - 20px);}
+    main #new_sec .new_wrap .new_content_wrap .new_content .new_product_list li a {}
+    main #new_sec .new_wrap .new_content_wrap .new_content .new_product_list li a .new_thum {width: 100%; margin-bottom: 10px;}
+    main #new_sec .new_wrap .new_content_wrap .new_content .new_product_list li a .new_thum img {width: 100%;}
+    main #new_sec .new_wrap .new_content_wrap .new_content .new_product_list li a .new_name {
         font-size: var(--font-size-sm-t);
         margin-bottom: 5px;
     }
-    main #new_sec .new_wrap .new_content .new_product_list li a .new_price {font-size: var(--font-size-md-t);}
+    main #new_sec .new_wrap .new_content_wrap .new_content .new_product_list li a .new_price {font-size: var(--font-size-md-t);}
+
+    /* ================================================================ 띠배너 */
+
+    /* ================================================================ 4행 앨범 */
+    main #album_sec {margin-top: 70px;}
+    main #album_sec .album_wrap {height: 700px;}
+    /* =========================================================메인배너, 제목 */
+    main #album_sec .album_wrap .album_detail {padding-left: 25px;}
+    main #album_sec .album_wrap .album_detail h2 {font-size: var(--font-size-xxxl-t); margin-bottom: 20px;}
+    /* ========================================================= 탭 메뉴 */
+    main #album_sec .album_wrap .album_detail .album_tab_menu {gap: 15px; margin-bottom: 50px;}
+    main #album_sec .album_wrap .album_detail .album_tab_menu li button {font-size: var(--font-size-lg-t);}
+    /* ========================================================= 앨범 */
+    main #album_sec .album_wrap .album_detail .album_title_img h2 {
+        font-size: var(--font-size-xxll-t);
+        margin-bottom: 5px;
+    }
+    main #album_sec .album_wrap .album_detail .album_title_img p {
+        font-size: var(--font-size-lg-t);
+        margin-bottom: 15px;
+    }
+    main #album_sec .album_wrap .album_detail .album_title_img .album_bnr_s {width: 350px;}
+    main #album_sec .album_wrap .album_detail .album_title_img .lp {
+        width: 350px;
+        position: absolute; top: 58px; left: 155px;
+    }
 }
 
 /* ============================================================================= 태블릿 -> 모바일 */
@@ -227,7 +262,7 @@
     main #aritst_sec {}
     main #aritst_sec .artist_wrap {padding: 70px 0;}
     main #aritst_sec .artist_wrap h2 {
-    font-size: var(--font-size-xxl-m);
+    font-size: var(--font-size-xxxl-m);
     margin-bottom: 30px;
     }
     main #aritst_sec .artist_wrap .artist_swiper .swiper-wrapper .swiper-slide {width: 300px ; height: 100%}
@@ -238,4 +273,98 @@
         margin-bottom: 10px;
     }
     main #aritst_sec .artist_wrap .artist_swiper .swiper-wrapper .swiper-slide a h3 {font-size: var(--font-size-lg-m);}
+
+        /* =========================================================== 3행 NEW */
+    main #new_sec {}
+    main #new_sec .new_wrap {padding-top: 50px; height: auto;}
+    main #new_sec .new_wrap h2 {
+        font-size: var(--font-size-xxxl-m);
+        margin-bottom: 30px;
+    }
+    /* ================================================탭메뉴 */    
+    main #new_sec .new_wrap .new_tab_menu {gap: 15px; margin-bottom: 20px;}
+    main #new_sec .new_wrap .new_tab_menu li button {font-size: var(--font-size-md-m);}
+    main #new_sec .new_wrap .new_tab_menu li button::after {
+        height: 3px;
+        background: #000;
+        bottom: -5px;
+    }
+
+    /* ================================================컨텐츠 */
+
+    main #new_sec .new_wrap .new_content_wrap .new_content {
+        gap: 15px;
+        height: auto;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+    } 
+
+    /* ================================================배너 */
+    main #new_sec .new_wrap .new_content_wrap .new_content .artist_banner {flex: auto;}
+    main #new_sec .new_wrap .new_content_wrap .new_content .artist_banner a {
+        width: 100%; height: 330px;
+    }
+    main #new_sec .new_wrap .new_content_wrap .new_content .artist_banner .new_bigbang {
+        background-image: url(../images/new/bigbang/banner.jpg);
+        background-position: 0 -70px;
+    }
+    main #new_sec .new_wrap .new_content_wrap .new_content .artist_banner .new_blackpink {
+        background-image: url(../images/new/blackpink/banner.jpg);
+    }
+    main #new_sec .new_wrap .new_content_wrap .new_content .artist_banner a .banner_text {font-size: 3rem; color: #fff;}
+    main #new_sec .new_wrap .new_content_wrap .new_content .artist_banner a .more_btn {
+        display: block;
+        width: 100px; height: 40px;
+        border-radius: 0 0 0 50px;
+        font-size: var(--font-size-lg-m);
+        line-height: 38px;
+        text-align: center;
+        padding-left: 10px;
+    }
+
+    /* ================================================상품리스트 */
+    main #new_sec .new_wrap .new_content_wrap .new_content .new_product_list {
+        display: flex; flex-flow: row wrap;
+        gap: 15px 20px;
+        height: 100%;
+        justify-content: center;
+        flex: auto;
+    }
+    main #new_sec .new_wrap .new_content_wrap .new_content .new_product_list li {flex: 0 0 calc(50% - 20px);}
+    main #new_sec .new_wrap .new_content_wrap .new_content .new_product_list li a {}
+    main #new_sec .new_wrap .new_content_wrap  .new_content .new_product_list li a .new_thum {width: 100%; margin-bottom: 3px;}
+    main #new_sec .new_wrap .new_content_wrap .new_content .new_product_list li a .new_name {
+        font-size: var(--font-size-md-m);
+        margin-bottom: 5px;
+        text-align: center;
+    }
+    main #new_sec .new_wrap .new_content_wrap .new_content .new_product_list li a .new_price {font-size: var(--font-size-lg-m); text-align: center;}
+    
+    /* ================================================================ 띠배너 */
+
+    /* ================================================================ 4행 앨범 */
+    main #album_sec {margin-top: 150px;}
+    main #album_sec .album_wrap {flex-flow: column nowrap; gap: 30px;}
+    /* =========================================================메인배너, 제목 */
+    main #album_sec .album_wrap .album_bnr {width: 100%; height: 290px;}
+    main #album_sec .album_wrap .album_bnr img {height: 290px;}
+    main #album_sec .album_wrap .album_detail {}
+    main #album_sec .album_wrap .album_detail h2 {font-size: var(--font-size-xxxl-m);}
+    /* ========================================================= 탭 메뉴 */
+    main #album_sec .album_wrap .album_detail .album_tab_menu {gap: 20px;}
+    main #album_sec .album_wrap .album_detail .album_tab_menu li button {font-size: var(--font-size-sm-m);}
+    /* ========================================================= 앨범 */
+    main #album_sec .album_wrap .album_detail .album_title_img h2 {
+        font-size: var(--font-size-xl-m);
+        margin-bottom: 2px;
+    }
+    main #album_sec .album_wrap .album_detail .album_title_img p {
+        font-size: var(--font-size-md-m);
+    }
+    main #album_sec .album_wrap .album_detail .album_title_img .album_bnr_s {width: 250px;}
+    main #album_sec .album_wrap .album_detail .album_title_img .lp {
+        width: 230px;
+        position: absolute; top: 58px; left: 125px;
+    }
 }

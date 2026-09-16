@@ -13,13 +13,16 @@
     --font-size-lg-t: 1.125rem; /* 18px */
     --font-size-xl-t: 1.25rem; /* 20px */
     --font-size-xxl-t: 1.25rem; /* 20px */
+    --font-size-xxll-t: 1.375rem; /* 22px */
     --font-size-xxxl-t: 2rem; /* 32px */
 
     /* 모바일 */
+    --font-size-sm-m: 0.75rem; /* 12px */
     --font-size-md-m: 0.875rem; /* 14px 아이콘메뉴 */
     --font-size-lg-m:1rem; /* 16px */
-    --font-size-xl-m: 1.25rem; /* 20px */
-    --font-size-xxl-m: 1.375rem; /* 22px */
+    --font-size-xl-m: 1.125rem; /* 18px */
+    --font-size-xxl-m: 1.25rem; /* 20px */
+    --font-size-xxxl-m: 1.375rem; /* 22px */
 
     --font-weight-bold: 800;
     --font-weight-medium: 500;
@@ -41,6 +44,12 @@
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: flex-start;
+}
+.flex_row_s_c {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
 }
 .flex_row_c_s {
     display: flex;

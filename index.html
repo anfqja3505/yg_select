@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="./styles/var.css">
     <link rel="stylesheet" href="./styles/index.css">
     <link rel="stylesheet" href="./styles/responsive.css">
+    <link rel="stylesheet" href="./styles/animation.css">
     <script src="./scripts/database.js"></script>
     <script src="./scripts/index.js" defer></script>
 </head>
@@ -183,6 +184,7 @@
                 </div>
             </div>
         </section><!-- e:#aritst_sec(아티스트) -->
+        <!-- 3행 신상품 -->
         <section id="new_sec">
             <div class="new_wrap">
                 <h2>NEW</h2>
@@ -193,29 +195,59 @@
                     <li><button type="button" id="new_babymonster_tab_btn">BABYMONSTER</button></li>
                     <li><button type="button" id="new_winner_tab_btn">WINNER</button></li>
                 </ul>
-                <div class="new_content flex_row_c_s active"><!-- 배너 + 신상품(빅뱅) -->
-                    <div class="artist_banner"><!-- 배너 -->
-                        <a href="#">
-                            <img src="./images/new/bigbang/banner.jpg" alt="빅뱅 신상품 바로가기">
-                            <span class="banner_text">BIGBANG</span>
-                            <span class="more_btn">more  &gt;</span>
-                        </a>
+                <div class="new_content_wrap">
+                    <div class="new_content flex_row_c_s active"><!-- 배너 + 신상품(빅뱅) -->
+                        <div class="artist_banner"><!-- 배너 -->
+                            <a href="#" class="new_bigbang">
+                                <span class="banner_text">BIGBANG</span>
+                                <span class="more_btn">more  &gt;</span>
+                            </a>
+                        </div>
+                        <ul class="new_product_list" data-artist="bigbang"><!-- JS 복제 --></ul><!-- 신상품 -->
                     </div>
-                    <ul class="new_product_list" data-artist="bigbang"><!-- JS 복제 --></ul><!-- 신상품 -->
-                </div>
-                <div class="new_content flex_row_c_s"><!-- 배너 + 신상품(블랙핑크) -->
-                    <div class="artist_banner"><!-- 배너 -->
-                        <a href="#">
-                            <img src="./images/new/blackpink/banner.jpg" alt="빅뱅 신상품 바로가기">
-                            <span class="banner_text white">BLACKPINK</span>
-                            <span class="more_btn">more  &gt;</span>
-                        </a>
+                    <div class="new_content flex_row_c_s"><!-- 배너 + 신상품(블랙핑크) -->
+                        <div class="artist_banner"><!-- 배너 -->
+                            <a href="#" class="new_blackpink">
+                                <span class="banner_text white">BLACKPINK</span>
+                                <span class="more_btn">more  &gt;</span>
+                            </a>
+                        </div>
+                        <ul class="new_product_list" data-artist="blackpink"><!-- JS 복제 --></ul><!-- 신상품 -->
                     </div>
-                    <ul class="new_product_list" data-artist="blackpink"><!-- JS 복제 --></ul><!-- 신상품 -->
                 </div>
             </div><!-- e:new_wrap -->
         </section><!-- e:#new_sec(신상품) -->
-        
+        <!-- 응원봉 띠배너 -->
+        <section id="line_bnr_sec">
+            <div class="line_bnr"><img src="./images/banner/" alt=""></div><!-- 추가예정 -->
+        </section>
+        <!-- 4행 앨범 영역 -->
+        <section id="album_sec">
+            <div class="album_wrap flex_row_c_c">
+                <div class="album_bnr"><img src="" alt=""></div><!-- js -->
+                <div class="album_detail">
+                    <h2>NEW MUSIC & ALBUM</h2>
+                    <ul class="album_tab_menu flex_row_s_c">
+                        <li><button type="button" id="album_bigbang_tab_btn" class="active">BIGBANG</button></li>
+                        <li><button type="button" id="album_blackpink_tab_btn">BLACKPINK</button></li>
+                        <li><button type="button" id="album_treasure_tab_btn">TREASURE</button></li>
+                        <li><button type="button" id="album_babymonster_tab_btn">BABYMONSTER</button></li>
+                        <li><button type="button" id="album_winner_tab_btn">WINNER</button></li>
+                    </ul>
+                    <div class="album_title_img flex_col_c_c"><!-- js 추가 --></div>
+                </div>
+            </div>
+        </section><!-- e:album_sec(앨범) -->
+        <!-- 띠배너 2 -->
+        <div class="yg_banner_container">
+            <div class="banner_wrap">
+                <div class="banner_text">
+                    <span>YG SELECT</span>
+                </div>
+            </div>
+        </div>
+        <!-- 5행 베스트 -->
+        <section id="best_sec"></section>
     </main>
     <footer><!-- =============================== 푸터 영역 -->
 

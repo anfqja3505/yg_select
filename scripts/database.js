@@ -84,3 +84,19 @@ const newProductDB = {
         { src: "./images/new/blackpink/bpnewpd6.jpg", name: "[KOREAEDITION] BLACKPINK T-SHIRT_MUGUNGHWA", price: "52,000원", link: "#" }
     ]
 };
+
+//===========================================앨범 DB
+const newAlbumDB = [
+    {
+        name: "bigbang",
+        smallTitle: "20th Anniversary [BiiiG]",
+        Bigsrc: "./images/album/bigbang/main_bigbang.jpg",
+        src : "./images/album/bigbang/bigbang_biiig.png",
+    },{
+        name: "blackpink",
+        smallTitle: "8th Anniversary [DEADLINE]",
+        Bigsrc: "./images/album/blackpink/main_blackpink.png",
+        src : "./images/album/blackpink/blackpink_deadline.png",
+    }
+
+]

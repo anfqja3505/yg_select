@@ -14,6 +14,14 @@ const swiper_wrapper = document.querySelector('.artist_swiper .swiper-wrapper');
 const tab_button = document.querySelectorAll('.new_tab_menu button');//탭메뉴
 const new_content = document.querySelectorAll('.new_content')//신상품 내용
 const new_product_list = document.querySelectorAll('.new_product_list');//신상품 리스트 ul
+/* 4행 앨범 영역 */
+const album_tab_btn = document.querySelectorAll('.album_tab_menu li button')
+const album_bnr = document.querySelector('.album_bnr img');//앨범 메인배너
+const album_title_img = document.querySelector('.album_title_img')//앨범 정보
+/* 띠배너(YGSELECT) */
+const banner_wrap = document.querySelector('.banner_wrap');
+const banner_text = document.querySelector('.banner_text');
+const banner_span = bannerText.querySelector('span');
 
 
 const heroSwiper = new Swiper('.hero_bnr',{// 히어로배너 swiper
@@ -38,6 +46,30 @@ const artistSwiper = new Swiper('.artist_swiper',{// 아티스트 swiper
         }
     },
 });
+/* 스크롤 */
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.to('#aritst_sec h2',{
+    opacity:1,
+    y:0,
+    duration:1,
+    scrollTrigger:{
+        trigger:'#aritst_sec',
+        start:'top 70%',
+        markers:true,
+    }
+})
+
+gsap.to('#new_sec h2',{
+    opacity:1,
+    y:0,
+    duration:1,
+    scrollTrigger:{
+        trigger:'#new_sec',
+        start:'top 70%',
+        markers:true,
+    }
+})
 
 window.addEventListener('load', function() {
     setTimeout(function() {
@@ -126,3 +158,39 @@ tab_button.forEach((t, i)=>{
         new_content[i].classList.add('active');
     });
 })
+
+//===================================앨범
+album_tab_btn[0].classList.add('active');
+album_bnr.src = newAlbumDB[0].Bigsrc;
+album_title_img.innerHTML = `
+    <h2>${newAlbumDB[0].name.toUpperCase()}</h2>
+    <p>${newAlbumDB[0].smallTitle}</p>
+    <p class="album_bnr_s"><img src="${newAlbumDB[0].src}" alt="${newAlbumDB[0].name}"></p>
+    <p class="lp"><img src="./images/album/lp.png" alt=""></p>
+`;
+
+album_tab_btn.forEach((o, i)=>{
+    o.addEventListener('click', ()=>{
+        if (!newAlbumDB[i]) return;
+        album_tab_btn.forEach((btn) => {btn.classList.remove('active')});
+        o.classList.add('active');
+        if (newAlbumDB[i]) {
+            album_bnr.src = newAlbumDB[i].Bigsrc;
+            album_title_img.innerHTML = `
+                <h2>${newAlbumDB[i].name.toUpperCase()}</h2>
+                <p>${newAlbumDB[i].smallTitle}</p>
+                <p class="album_bnr_s"><img src="${newAlbumDB[i].src}" alt="${newAlbumDB[i].name}"></p>
+                <p class="lp"><img src="./images/album/lp.png" alt=""></p>
+            `;
+        }
+    });
+});
+
+//=================================================== YGSELECT 띠배너
+for (let i = 0; i < 9; i++) {
+    const cloneSpan = banner_span.cloneNode(true);
+    banner_text.appendChild(cloneSpan);
+}
+
+const cloneGroup = banner_text.cloneNode(true);
+banner_wrap.appendChild(cloneGroup);

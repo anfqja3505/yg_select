@@ -1,0 +1,19 @@
+/* YG SELECT | animation.css */
+
+@keyframes spin_lp {/* lp판 애니메이션 */
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes yg_line_bnr { /* yg셀렉트 띠배너 애니메이션 */
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
