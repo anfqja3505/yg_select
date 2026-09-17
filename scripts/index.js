@@ -1,5 +1,5 @@
 // YG SELECT | index.js
-/* 헤더 */
+// 헤더
 const menu_list_a = document.querySelectorAll('.menu_list li > a');//메뉴리스트
 const search_btn = document.querySelector('#search_btn');//검색버튼
 const search_popup = document.querySelector('.search_popup');//검색창
@@ -8,22 +8,27 @@ const popular_pd = document.querySelector('.popular_pd');//실시간 인기 상�
 const popular_search = document.querySelector('.popular_search');//인기검색어
 const m_t_menu = document.querySelector('.m_t_menu')//태블릿 모바일 전체메뉴
 const t_m_menu_btn = document.querySelector('#t_m_menu_btn');//태블릿 모바일 전체메뉴 버튼
-/* 2행 아티스트영역 */
+const t_m_btnImg = document.querySelector('#t_m_menu_btn img');//태블릿 모바일 전체메뉴 버튼 이미지
+// 2행 아티스트영역
 const swiper_wrapper = document.querySelector('.artist_swiper .swiper-wrapper');//아티스트 슬라이드
-/* 3행 new 영역 */
+// 3행 new 영역
 const tab_button = document.querySelectorAll('.new_tab_menu button');//탭메뉴
 const new_content = document.querySelectorAll('.new_content')//신상품 내용
 const new_product_list = document.querySelectorAll('.new_product_list');//신상품 리스트 ul
-/* 4행 앨범 영역 */
+// 4행 앨범 영역
 const album_tab_btn = document.querySelectorAll('.album_tab_menu li button')
 const album_bnr = document.querySelector('.album_bnr img');//앨범 메인배너
 const album_title_img = document.querySelector('.album_title_img')//앨범 정보
-/* 띠배너(YGSELECT) */
+// 띠배너(YGSELECT) 
 const banner_wrap = document.querySelector('.banner_wrap');
-const banner_text = document.querySelector('.banner_text');
-const banner_span = bannerText.querySelector('span');
+const line_banner_text = document.querySelector('.line_banner_text');
+const banner_span = document.querySelector('.line_banner_text span');
+// 5행 베스트
+const bestWrapper = document.querySelector('.best_detail .swiper-wrapper');
+// 6행 이벤트
+const eventWrapper = document.querySelector('.event_slide .swiper-wrapper');
 
-
+// ================================================================= Swiper
 const heroSwiper = new Swiper('.hero_bnr',{// 히어로배너 swiper
     slidesPerView:1,
 
@@ -46,7 +51,35 @@ const artistSwiper = new Swiper('.artist_swiper',{// 아티스트 swiper
         }
     },
 });
-/* 스크롤 */
+const bestSwiper = new Swiper('.best_detail',{ //베스트 스와이퍼
+    slidesPerView:1,
+    spaceBetween: 15,
+    observer: true,
+    observeParents: true,
+    breakpoints: {
+        901: {
+            slidesPerView: 2,
+        }
+    },
+})
+const eventSwiper = new Swiper('.event_slide', {//이벤트 스와이퍼
+    slidesPerView: 3,
+    spaceBetween: 10,
+    observer: true,
+    observeParents: true,
+    breakpoints: {
+        901: {
+            slidesPerView: 4,
+            spaceBetween: 20
+        },
+        1401: {
+            slidesPerView: 5,
+            spaceBetween: 20
+        }
+    }
+});
+
+//===================================================================== 스크롤
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.to('#aritst_sec h2',{
@@ -95,13 +128,24 @@ menu_list_a.forEach((target)=>{/* 메뉴 호버시 닫기 */
     });
 });
 
-t_m_menu_btn.addEventListener('click',()=>{/* 모바일 태블릿 전체메뉴 */
-    if(search_popup.classList.contains('active')){
-        search_popup.classList.remove('active')
-    }
-    m_t_menu.classList.toggle('active')
-});
+// t_m_menu_btn.addEventListener('click',()=>{/* 모바일 태블릿 전체메뉴 */
+//     if(search_popup.classList.contains('active')){
+//         search_popup.classList.remove('active')
+//     }
+//     m_t_menu.classList.toggle('active')
+// });
 
+t_m_menu_btn.addEventListener('click', () => {
+    if (search_popup.classList.contains('active')) {
+        search_popup.classList.remove('active');
+    }
+    m_t_menu.classList.toggle('active');
+    if (m_t_menu.classList.contains('active')) {
+        t_m_btnImg.src = './images/icon/close_btn.svg';
+    } else {
+        t_m_btnImg.src = './images/icon/t_m_menu_btn.svg';
+    }
+});
 
 //===================================검색창 
 
@@ -187,10 +231,53 @@ album_tab_btn.forEach((o, i)=>{
 });
 
 //=================================================== YGSELECT 띠배너
-for (let i = 0; i < 9; i++) {
+for (let i=0; i<20; i++) {
     const cloneSpan = banner_span.cloneNode(true);
-    banner_text.appendChild(cloneSpan);
+    line_banner_text.appendChild(cloneSpan);
 }
 
-const cloneGroup = banner_text.cloneNode(true);
+const cloneGroup = line_banner_text.cloneNode(true);
 banner_wrap.appendChild(cloneGroup);
+
+//=================================================== BEST
+for (const i of bestDB) {
+    let bestHTML = '';
+    for (const p of i.product) {
+        bestHTML += `
+            <a href="${p.pd_link}" class="product_info">
+                <p class="best_thum"><img src="${p.src}" alt="${p.name}"></p>
+                <p class="best_name">${p.name}</p>
+                <p class="best_price">${p.price}</p>
+            </a>
+        `;
+    }
+    const li = document.createElement('li');
+    li.classList.add('swiper-slide')
+    li.innerHTML = `
+        <div class="artist_best_wrap">
+            <a href="${i.link}" class="best_bnr">
+                <img src="${i.bannerSrc}" alt="${i.name}">
+                <h1>${i.name}</h1>
+            </a>
+            <div class="best_product flex_row_b_c">
+                ${bestHTML}
+            </div>
+        </div>
+    `;
+    bestWrapper.appendChild(li);
+}
+
+//========================================================event
+for (const i of eventDB) {
+    const li = document.createElement('li');
+    li.classList.add('swiper-slide');
+    li.innerHTML = `
+        <a href="${i.link}" class="event_detail">
+            <p class="event_thum">
+                <img src="${i.src}" alt="${i.title}">
+            </p>
+            <h3>${i.title}</h3>
+        </a>
+    `;
+    eventWrapper.prepend(li);
+}

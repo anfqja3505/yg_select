@@ -157,7 +157,7 @@ header .menu_right .icon_menu .search_popup .popular_search_pd li a {
 header .menu_right .icon_menu .search_popup h3 {
     font-size: var(--font-size-lg-d); 
     font-weight: var(--font-weight-bold);
-    margin-bottom: 15px;
+    margin-bottom: 25px;
 }
 header .menu_right .icon_menu .search_popup .popular_search_pd {}
 header .menu_right .icon_menu .search_popup .popular_search_pd .popular_pd_wrap {position: relative; width: 160px;}
@@ -193,8 +193,8 @@ header .menu_right .icon_menu .search_popup .search_input_recent .search_recent 
     font-weight: var(--font-weight-light);
 }
 
-header .menu_right .icon_menu .search_popup .search_ad {max-width: 500px; height: 280px;}
-header .menu_right .icon_menu .search_popup .search_ad img {width: 100%; height: 100%; /* aspect-ratio: 500 / 280; */}
+header .menu_right .icon_menu .search_popup .search_ad {max-width: 500px; height: 260px;}
+header .menu_right .icon_menu .search_popup .search_ad img {width: 100%; height: 100%; object-fit: cover;}
 /* ===============================================================================(아래)메인 */
 main {}
 /* =================================================== 1행 히어로배너 */
@@ -404,7 +404,27 @@ main #new_sec .new_wrap .new_content_wrap .new_content .new_product_list li a .n
 }
 main #new_sec .new_wrap .new_content_wrap .new_content .new_product_list li a .new_price {font-weight: var(--font-weight-bold); font-size: var(--font-size-md-d);}
 
-/* ========================================띠배너 */
+/* ========================================띠배너(응원봉) */
+main #line_bnr_sec {padding: 200px 0 100px 0;}
+main #line_bnr_sec .line_bnr {padding: 0 100px; background: #111; overflow: hidden; height: 200px;}
+main #line_bnr_sec .line_bnr .line_bnr_text {position: relative;}
+main #line_bnr_sec .line_bnr .line_bnr_text * {
+    color: #fff;
+    white-space: nowrap;
+}
+main #line_bnr_sec .line_bnr .line_bnr_text h2 {
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-xxl-d);
+    margin-bottom: 5px;
+}
+main #line_bnr_sec .line_bnr .line_bnr_text .bnr_details {
+    font-size: var(--font-size-lg-d); font-weight: var(--font-weight-light);
+    margin-bottom: 10px;
+}
+main #line_bnr_sec .line_bnr .line_bnr_text .buy_now {font-size: var(--font-size-md-d); font-weight: var(--font-weight-light);}
+
+main #line_bnr_sec .line_bnr .cheering_group {padding-top: 200px;}
+main #line_bnr_sec .line_bnr .cheering_group img {width: 110px;}
 
 /* ================================================================ 4행 앨범 */
 main #album_sec {margin-top: 150px;}
@@ -481,35 +501,74 @@ main #album_sec .album_wrap .album_detail .album_title_img .lp img {
 .yg_banner_container {
     overflow: hidden;
     width: 100%;
-    background: #000000; 
+    background: #111; 
     padding: 20px 0;
     white-space: nowrap;
 }
-.banner_wrap {
+.yg_banner_container .banner_wrap {
     display: flex;
     width: max-content;
-    animation: yg_line_bnr 15s linear infinite;
+    animation: yg_line_bnr 60s linear infinite;
 }
-.banner_text {
+.yg_banner_container .banner_wrap .line_banner_text {
     display: flex;
     gap: 50px; 
     align-items: center;
     padding-right: 50px;
 }
-.banner_text span {
-    font-size: 24px;
-    font-weight: bold;
-    color: #ffffff; 
+.yg_banner_container .banner_wrap .line_banner_text span {
+    font-size: var(--font-size-xxl-d);
+    font-weight: var(--font-weight-bold);
+    color: #fff; 
     letter-spacing: 1px;
 }
 .yg_banner_container:hover .banner_wrap {
     animation-play-state: paused;
 }
-@keyframes yg_line_bnr {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-50%);
-    }
+
+/* =================================================== best */
+main #best_sec {background-color: #111; padding: 0 140px;}
+main #best_sec .best_wrap {margin: 0 auto; padding: 150px 0;}
+main #best_sec .best_wrap * {color: #fff;}
+main #best_sec .best_wrap h2 {
+    font-size: var(--font-size-xxl-d); 
+    font-weight: var(--font-weight-bold); 
+    text-align: center;
+    margin-bottom: 50px;
+}
+main #best_sec .best_wrap .best_detail {}
+main #best_sec .best_wrap .best_detail .swiper-wrapper {}
+main #best_sec .best_wrap .best_detail .swiper-wrapper .artist_best_wrap {}
+main #best_sec .best_wrap .best_detail .swiper-wrapper .artist_best_wrap .best_bnr {
+    height: 480px;
+    display: block;
+    position: relative;
+    margin-bottom: 10px;
+}
+main #best_sec .best_wrap .best_detail .swiper-wrapper .artist_best_wrap .best_bnr img {
+    width: 100%; height: 100%; 
+    object-fit: cover;
+}
+main #best_sec .best_wrap .best_detail .swiper-wrapper .artist_best_wrap .best_bnr h1 {
+    position: absolute;
+    bottom: 30px; left: 30px;
+    font-size: 3rem;
+    font-weight: var(--font-weight-bold);
+}
+main #best_sec .best_wrap .best_detail .swiper-wrapper .artist_best_wrap .best_product {gap: 10px;}
+main #best_sec .best_wrap .best_detail .swiper-wrapper .artist_best_wrap .best_product .product_info {flex: 1; display: block;} 
+main #best_sec .best_wrap .best_detail .swiper-wrapper .artist_best_wrap .best_product .product_info .best_thum {width: 100%; height:265px; margin-bottom: 12px;}
+main #best_sec .best_wrap .best_detail .swiper-wrapper .artist_best_wrap .best_product .product_info .best_thum img {width: 100%; height:100%; background: #fff;}
+main #best_sec .best_wrap .best_detail .swiper-wrapper .artist_best_wrap .best_product .product_info .best_name {
+    font-weight: var(--font-weight-light);
+    font-size: var(--font-size-sm-d);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    margin-bottom: 7px;
+}
+main #best_sec .best_wrap .best_detail .swiper-wrapper .artist_best_wrap .best_product .product_info .best_price {
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-md-d);
 }

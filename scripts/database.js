@@ -100,3 +100,67 @@ const newAlbumDB = [
     }
 
 ]
+
+//===========================================베스트 DB
+const bestDB = [
+    {
+        bannerSrc: "./images/best/blackpink/main.jpg",
+        name: "BLACKPINK",
+        link: "#",
+        product: [
+            { src: "./images/best/blackpink/best1.jpg", name: "BLACKPINK 2ND ALBUM [BORN PINK]", price: "13,200원", pd_link:"#" },
+            { src: "./images/best/blackpink/best2.jpg", name: "JISOO [ME] PHOTOBOOK [SPECIAL EDITION]", price: "49,800원", pd_link:"#" },
+            { src: "./images/best/blackpink/best3.jpg", name: "ROSÉ first studio album 'rosie' (JEWEL)", price: "14,100원", pd_link:"#" }
+        ]
+    },
+    {
+        bannerSrc: "./images/best/treasure/main.jpg",
+        name: "TREASURE",
+        link: "#",
+        product: [
+            { src: "./images/best/treasure/best1.jpg", name: "[6THANNIVERSARY] TREASURE BRICK SET", price: "50,000원", pd_link:"#" },
+            { src: "./images/best/treasure/best2.jpg", name: "TREASURE 3rd MINI ALBUM [LOVE PULSE]", price: "18,600원", pd_link:"#" },
+            { src: "./images/best/treasure/best3.jpg", name: "TREASURE 3rd MINI ALBUM [LOVE PULSE]", price: "18,600원", pd_link:"#" }
+        ]
+    }
+];
+
+//============================================================ 이벤트 DB
+const eventDB = [
+    {
+        id: 1,
+        src: "./images/event/event1.jpg",
+        title: "[TREASURE] TRAVEL COLLECTION / SPECIAL MD",
+        link: "#"
+    },
+    {
+        id: 2,
+        src: "./images/event/event2.jpg",
+        title: "BABYMONSTER 3RD MINI ALBUM [DRIP] CHOOM",
+        link: "#"
+    },
+    {
+        id: 3,
+        src: "./images/event/event3.jpg",
+        title: "TREASURE 4TH MINI ALBUM [NEW WAV] OFFICIAL MERCH",
+        link: "#"
+    },
+    {
+        id: 4,
+        src: "./images/event/event4.jpg",
+        title: "BABYMONSTER WORLD TOUR [HELLO MONSTERS] IN SEOUL OFFICIAL MERCH",
+        link: "#"
+    },
+    {
+        id: 5,
+        src: "./images/event/event5.jpg",
+        title: "[TREASURE] EVERYDAY, YOUR WAY / OFFICIAL MERCH",
+        link: "#"
+    },
+    {
+        id: 6,
+        src: "./images/event/event6.jpg",
+        title: "[EVENT] 6TH ITEM TITLE",
+        link: "#"
+    }
+];
