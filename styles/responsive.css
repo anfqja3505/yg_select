@@ -389,10 +389,10 @@
     header .menu_right .icon_menu .search_popup .search_input_recent .search_recent #recent_delete {font-size: var(--font-size-md-m);}
     /* =========================================== 히어로배너 */
     main #hero_sec .hero_bnr .swiper-wrapper .swiper-slide {height: 700px;}
-    main #hero_sec .hero_bnr .swiper-wrapper .swiper-slide a {background-image: url('../images/hero/hero_m.png');}
-    main #hero_sec .hero_bnr .swiper-wrapper .swiper-slide a .bnr_title_wrap1 {top: 70px;}
-    main #hero_sec .hero_bnr .swiper-wrapper .swiper-slide a .bnr_title_wrap1 h3 {font-size: 2.625em;}
-    main #hero_sec .hero_bnr .swiper-wrapper .swiper-slide a .bnr_title_wrap1 p {font-size: 1.25em;}
+    main #hero_sec .hero_bnr .swiper-wrapper .swiper-slide .hero_bnr1 {background-image: url('../images/hero/hero_m.png');}
+    main #hero_sec .hero_bnr .swiper-wrapper .swiper-slide .hero_bnr1 .bnr_title_wrap1 {top: 70px;}
+    main #hero_sec .hero_bnr .swiper-wrapper .swiper-slide .hero_bnr1 .bnr_title_wrap1 h3 {font-size: 2.625em;}
+    main #hero_sec .hero_bnr .swiper-wrapper .swiper-slide .hero_bnr1 .bnr_title_wrap1 p {font-size: 1.25em;}
         /* ===================================================아티스트 */
     main #aritst_sec {}
     main #aritst_sec .artist_wrap {padding: 70px 0;}
@@ -478,7 +478,18 @@
     
         /* ========================================띠배너(응원봉) */
     main #line_bnr_sec {padding: 110px 0 10px 0;}
-    main #line_bnr_sec .line_bnr {padding: 0 15px; height: 100px;}
+    main #line_bnr_sec .line_bnr {
+        padding: 0 15px; height: 180px;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+        main #line_bnr_sec .line_bnr .line_bnr_text {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+            padding-top: 30px;
+        }
     main #line_bnr_sec .line_bnr .line_bnr_text h2 {
         font-size: var(--font-size-xxl-m);
         margin-bottom: 5px;
@@ -489,8 +500,8 @@
     }
     main #line_bnr_sec .line_bnr .line_bnr_text .buy_now {font-size: var(--font-size-sm-m);}
 
-    main #line_bnr_sec .line_bnr .cheering_group {padding-top: 90px;}
-    main #line_bnr_sec .line_bnr .cheering_group img {width: 50px;}
+    main #line_bnr_sec .line_bnr .cheering_group {padding-top: 20px;}
+    main #line_bnr_sec .line_bnr .cheering_group img {width: 80px;}
 
 
     /* ================================================================ 4행 앨범 */
@@ -513,10 +524,10 @@
     main #album_sec .album_wrap .album_detail .album_title_img p {
         font-size: var(--font-size-md-m);
     }
-    main #album_sec .album_wrap .album_detail .album_title_img .album_bnr_s {width: 250px;}
+    main #album_sec .album_wrap .album_detail .album_title_img .album_bnr_s {width: 300px;}
     main #album_sec .album_wrap .album_detail .album_title_img .lp {
-        width: 230px;
-        position: absolute; top: 58px; left: 125px;
+        width: 290px;
+        position: absolute; top: 50px; left: 125px;
     }
         /* ==============================================띠배너(YGSELECT) */
     .yg_banner_container {padding: 12px 0; margin-top: 50px;}
@@ -552,6 +563,7 @@
     main #best_sec .best_wrap .best_detail .swiper-wrapper .artist_best_wrap .best_product .product_info .best_name {
         font-size: var(--font-size-xs-m);
         width: 100%;
+        margin-bottom: 5px;
     }
     main #best_sec .best_wrap .best_detail .swiper-wrapper .artist_best_wrap .best_product .product_info .best_price {font-size: var(--font-size-sm-m);}
 
