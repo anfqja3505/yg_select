@@ -76,33 +76,111 @@ const eventSwiper = new Swiper('.event_slide', {//이벤트 스와이퍼
             slidesPerView: 5,
             spaceBetween: 20
         }
-    }
+    },
+    scrollbar: {
+        el: '.event_wrap .swiper-scrollbar',
+        draggable: true,
+    },
 });
 
 //===================================================================== 스크롤
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.to('#aritst_sec h2',{
-    opacity:1,
-    y:0,
-    duration:1,
-    scrollTrigger:{
-        trigger:'#aritst_sec',
-        start:'top 70%',
-        markers:true,
+gsap.fromTo('#aritst_sec h2',
+    {
+        y:-100,
+        opacity: 0,
+    },{
+        opacity:1,
+        y:0,
+        duration:1,
+        scrollTrigger:{
+            trigger:'#aritst_sec',
+            start:'top 70%',
+            markers:true,
+        }
     }
-})
+)
 
-gsap.to('#new_sec h2',{
-    opacity:1,
-    y:0,
-    duration:1,
-    scrollTrigger:{
-        trigger:'#new_sec',
-        start:'top 70%',
-        markers:true,
+gsap.fromTo('#new_sec h2',
+    {
+        y:-100,
+        opacity: 0,
+    },{
+        opacity:1,
+        y:0,
+        duration:1,
+        scrollTrigger:{
+            trigger:'#new_sec',
+            start:'top 70%',
+            markers:true,
+        }
     }
-})
+)
+
+gsap.fromTo('#best_sec h2',
+    {
+        y:-100,
+        opacity: 0,
+    },{
+        opacity:1,
+        y:0,
+        duration:1,
+        scrollTrigger:{
+            trigger:'#best_sec',
+            start:'top 70%',
+            markers:true,
+        }
+    }
+)
+
+gsap.fromTo('#event_sec h2',
+    {
+        y:-100,
+        opacity: 0,
+    },{
+        opacity:1,
+        y:0,
+        duration:1,
+        scrollTrigger:{
+            trigger:'#event_sec',
+            start:'top 80%',
+            markers:true,
+        }
+    }
+)
+
+gsap.fromTo('#album_sec .album_wrap .album_bnr',
+    {
+        x:-200,
+        opacity: 0,
+    },{
+        opacity:1,
+        x:0,
+        duration:0.7,
+        scrollTrigger:{
+            trigger:'#album_sec',
+            start:'top 80%',
+            markers:true,
+        }
+    }
+)
+
+gsap.fromTo('#album_sec .album_wrap .album_detail',
+    {
+        x:200,
+        opacity: 0,
+    },{
+        opacity:1,
+        x:0,
+        duration:0.7,
+        scrollTrigger:{
+            trigger:'#album_sec',
+            start:'top 90%',
+            markers:true,
+        }
+    }
+)
 
 window.addEventListener('load', function() {
     setTimeout(function() {
@@ -271,7 +349,7 @@ for (const i of bestDB) {
 for (const i of eventDB) {
     const li = document.createElement('li');
     li.classList.add('swiper-slide');
-    li.innerHTML = `
+    li.innerHTML += `
         <a href="${i.link}" class="event_detail">
             <p class="event_thum">
                 <img src="${i.src}" alt="${i.title}">

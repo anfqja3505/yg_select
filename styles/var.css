@@ -2,6 +2,7 @@
 :root{
     /* 데스크탑 */
     --font-size-xs-d: 0.875rem; /* 14px */
+    --font-size-xsm-d: 0.938rem; /* 15px */
     --font-size-sm-d: 1rem; /* 16px */
     --font-size-md-d: 1.125rem; /* 18px 아이콘메뉴  */
     --font-size-lg-d: 1.25rem; /* 20px 메뉴카테고리  */
@@ -9,6 +10,7 @@
     --font-size-xxl-d: 2.25rem; /* 36px 중제목 */
     /* 태블릿 */
     --font-size-xs-t: 0.75rem; /* 12px */
+    --font-size-xsm-t: 0.813rem; /* 13px */
     --font-size-sm-t: 0.875rem; /* 14px */
     --font-size-md-t: 1rem; /* 16px 아이콘메뉴 */
     --font-size-lg-t: 1.125rem; /* 18px */
@@ -18,17 +20,20 @@
     --font-size-xxxl-t: 2rem; /* 32px */
 
     /* 모바일 */
+    --font-size-xxs-m: 0.625rem; /* 10px */
     --font-size-xs-m: 0.688rem; /* 11px */
     --font-size-sm-m: 0.75rem; /* 12px */
     --font-size-md-m: 0.875rem; /* 14px 아이콘메뉴 */
-    --font-size-lg-m:1rem; /* 16px */
+    --font-size-lg-m: 1rem; /* 16px */
     --font-size-xl-m: 1.125rem; /* 18px */
     --font-size-xxl-m: 1.25rem; /* 20px */
     --font-size-xxxl-m: 1.375rem; /* 22px */
     --font-size-xxxxl-m: 1.5rem; /* 24px */
 
     --font-weight-bold: 800;
+    --font-weight-semibold: 700;
     --font-weight-medium: 500;
+    --font-weight-regular: 400;
     --font-weight-light: 300;
 
     --bg-disable: #ddd;
@@ -82,6 +87,18 @@
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
+    align-items: flex-start;
+}
+.flex_col_b_e {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.flex_col_s_s {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
     align-items: flex-start;
 }
 

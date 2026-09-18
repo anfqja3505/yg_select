@@ -220,6 +220,12 @@
         font-size: var(--font-size-xxxl-t); 
         margin-bottom: 40px;
     }
+    main #best_sec .best_wrap .swiper-button-next {
+        right: 16px;
+    }
+    main #best_sec .best_wrap .swiper-button-prev {
+        left: 16px;
+    }
     main #best_sec .best_wrap .best_detail .swiper-wrapper .artist_best_wrap .best_bnr {
         height: 480px;
         margin-bottom: 10px;
@@ -228,13 +234,98 @@
         bottom: 30px; left: 30px;
         font-size: 2.625rem;
     }
-    main #best_sec .best_wrap .best_detail .swiper-wrapper .artist_best_wrap .best_product .product_info .best_thum {width: 100%px; height:142px; margin-bottom: 7px;}
+    main #best_sec .best_wrap .best_detail .swiper-wrapper .artist_best_wrap .best_product .product_info .best_thum {width: 100%; height:100%; margin-bottom: 7px;}
     main #best_sec .best_wrap .best_detail .swiper-wrapper .artist_best_wrap .best_product .product_info .best_name {
         font-size: var( --font-size-xs-t);
-        width: 160px;
+        width: 100%;
         margin-bottom: 3px;
     }
     main #best_sec .best_wrap .best_detail .swiper-wrapper .artist_best_wrap .best_product .product_info .best_price {font-size: var(--font-size-sm-t);}
+    /*========================================================= 이벤트  */
+    main #event_sec {}
+    main #event_sec .event_wrap {padding: 70px 0;}
+    main #event_sec .event_wrap h2 {
+        font-size: var(--font-size-xxxl-t);
+        margin-bottom: 40px; 
+}
+    main #event_sec .event_wrap .event_slide {}
+    main #event_sec .event_wrap .event_slide .swiper-wrapper {}
+    main #event_sec .event_wrap .event_slide .swiper-wrapper .swiper-slide {width: 240px; height: 450px;}
+    main #event_sec .event_wrap .event_slide .swiper-wrapper .swiper-slide:nth-child(even) {transform: translateY(60px);}
+    main #event_sec .event_wrap .event_slide .swiper-wrapper .swiper-slide .event_detail {font-size: var(--font-size-md-t);}
+    main #event_sec .event_wrap .event_slide .swiper-wrapper .swiper-slide .event_detail .event_thum {height: 326px;  margin-bottom: 15px;}
+    main #event_sec .event_wrap .event_slide .swiper-wrapper .view_all {width: 240px; height: 326px;}
+    main #event_sec .event_wrap .event_slide .swiper-wrapper .view_all a .view_all_img {
+        height: 326px;
+        margin-bottom: 15px;
+        font-size: 10rem;
+    }
+    main #event_sec .event_wrap .event_slide .swiper-wrapper .view_all a h3 {font-size: var(--font-size-md-t);}
+    main #event_sec .event_wrap .swiper-scrollbar {width: 300px;}
+    
+    /* ===================================================================== 슬로건  */
+
+
+    /* ===================================================================== footer */
+    footer {padding: 0 60px;}
+    footer .footer_wrap {padding: 50px 0;}
+    /* ============================================================== footer 상단 */
+    footer .footer_wrap .footer_top {margin-bottom: 30px;}
+    /* ====================================================로고 */
+    footer .footer_wrap .footer_top h1 {width: 100px; height: 57px;}
+    /* ====================================================sns+패밀리사이트 */
+    footer .footer_wrap .footer_top .footer_sns_family {gap: 30px;}
+    /* ====================================================패밀리사이트 */
+    footer .footer_wrap .footer_top .footer_sns_family .family_site_wrap select {
+        width: 118px; height: 36px;
+        padding-left: 10px;
+        background-size: 24px;
+        font-size: var(--font-size-sm-t);
+    }
+    /* ====================================================sns */
+    footer .footer_wrap .footer_top .footer_sns_family .sns_list {gap: 15px;}
+    footer .footer_wrap .footer_top .footer_sns_family .sns_list a {width: 36px;}
+    /* ============================================================== footer 하단 */
+    footer .footer_wrap .footer_bottom .footer_left {gap: 10px;}
+    /* ====================================================메뉴 */
+    footer .footer_wrap .footer_bottom .footer_left .footer_menu {gap: 12px;}
+    footer .footer_wrap .footer_bottom .footer_left .footer_menu li::after {
+        width:1px; height: 12px;
+        right: -7px; top: 2px;
+    }
+    footer .footer_wrap .footer_bottom .footer_left .footer_menu li a {font-size: 0.938rem;
+    }
+    /* ====================================================address */
+    footer .footer_wrap .footer_bottom .footer_left .company_info p:nth-child(4) {margin-bottom: 10px;}
+    footer .footer_wrap .footer_bottom .footer_left .company_info * {font-size: var(--font-size-xs-t);
+    }
+    footer .footer_wrap .footer_bottom .footer_left .company_info .copyright {
+        font-size: var(--font-size-xsm-t);
+    }
+    /* ==================================================== cs센터 */
+    footer .footer_wrap .footer_bottom .cs_center {gap: 12px;}
+    footer .footer_wrap .footer_bottom .cs_center h3 {font-size: var(--font-size-md-t);}
+    footer .footer_wrap .footer_bottom .cs_center .phone_num * {font-size: var(--font-size-sm-t);}
+    footer .footer_wrap .footer_bottom .cs_center .phone_num p {width: 120px;}
+    footer .footer_wrap .footer_bottom .cs_center .phone_num .tel {margin-bottom: 3px;}
+    footer .footer_wrap .footer_bottom .cs_center .phone_num .fax {}
+    footer .footer_wrap .footer_bottom .cs_center .hour {}
+    footer .footer_wrap .footer_bottom .cs_center .hour * {font-size: var(--font-size-sm-t);}
+    footer .footer_wrap .footer_bottom .cs_center .hour p {}
+    footer .footer_wrap .footer_bottom .cs_center .hour p:nth-child(1) {margin-bottom: 3px;}
+
+    /* ====================================================== CTA */
+    #top_btn {
+        position: fixed; right: 50px; bottom: 50px;
+        width: 42px; height: 42px;
+    }
+    #top_btn img {
+        width: 38px;
+        display: block;
+    }
+    #top_btn span {
+        font-size: var(--font-size-md-t);
+    }
 }
 
 /* ============================================================================= 태블릿 -> 모바일 */
@@ -443,14 +534,114 @@
         font-size: var(--font-size-xxxl-m); 
         margin-bottom: 30px;
     }
+    main #best_sec .best_wrap .swiper-button-next,
+    main #best_sec .best_wrap .swiper-button-prev {
+        top: 45%;
+    }
+    main #best_sec .best_wrap .swiper-button-next {
+        right: 30px;
+    }
+    main #best_sec .best_wrap .swiper-button-prev {
+        left: 30px;
+    }
     main #best_sec .best_wrap .best_detail .swiper-wrapper .artist_best_wrap .best_bnr {
         height: 480px;
         margin-bottom: 10px;
     }
-    main #best_sec .best_wrap .best_detail .swiper-wrapper .artist_best_wrap .best_product .product_info .best_thum {width: 100%; height:180px;}
+    main #best_sec .best_wrap .best_detail .swiper-wrapper .artist_best_wrap .best_product .product_info .best_thum {width: 100%; height:100%;}
     main #best_sec .best_wrap .best_detail .swiper-wrapper .artist_best_wrap .best_product .product_info .best_name {
         font-size: var(--font-size-xs-m);
-        width: 180px;
+        width: 100%;
     }
     main #best_sec .best_wrap .best_detail .swiper-wrapper .artist_best_wrap .best_product .product_info .best_price {font-size: var(--font-size-sm-m);}
+
+        /*========================================================= 이벤트  */
+    main #event_sec {}
+    main #event_sec .event_wrap {padding: 50px 0;}
+    main #event_sec .event_wrap h2 {
+        font-size: var(--font-size-xxxl-m);}
+    main #event_sec .event_wrap .event_slide {}
+    main #event_sec .event_wrap .event_slide .swiper-wrapper {}
+    main #event_sec .event_wrap .event_slide .swiper-wrapper .swiper-slide {width: 140px; height: 260px;}
+    main #event_sec .event_wrap .event_slide .swiper-wrapper .swiper-slide:nth-child(even) {transform: translateY(18px);}
+    main #event_sec .event_wrap .event_slide .swiper-wrapper .swiper-slide .event_detail {font-size: var(--font-size-sm-m);}
+    main #event_sec .event_wrap .event_slide .swiper-wrapper .swiper-slide .event_detail .event_thum {height: 190px;  margin-bottom: 10px;}
+    main #event_sec .event_wrap .event_slide .swiper-wrapper .view_all {width: 140px; height: 260px;}
+    main #event_sec .event_wrap .event_slide .swiper-wrapper .view_all a .view_all_img {
+        height: 190px;
+        margin-bottom: 10px;
+        font-size: 7rem;
+    }
+    main #event_sec .event_wrap .event_slide .swiper-wrapper .view_all a h3 {font-size: var(--font-size-sm-m);}
+    main #event_sec .event_wrap .swiper-scrollbar {width: 150px;}
+
+    /* ===================================================================== 슬로건  */
+
+
+    /* ===================================================================== footer */
+    footer {padding: 0 15px;}
+    footer .footer_wrap {padding: 30px 0;}
+    /* ============================================================== footer 상단 */
+    footer .footer_wrap .footer_top {margin-bottom: 20px;}
+    /* ====================================================로고 */
+    footer .footer_wrap .footer_top h1 {width: 80px; height: 46px;}
+    /* ====================================================sns+패밀리사이트 */
+    footer .footer_wrap .footer_top .footer_sns_family {gap: 15px;}
+    /* ====================================================패밀리사이트 */
+    footer .footer_wrap .footer_top .footer_sns_family .family_site_wrap select {
+        width: 99px; height: 32px;
+        padding-left: 5px;
+        background-size: 24px;
+        font-size: var(--font-size-sm-m);
+    }
+    /* ====================================================sns */
+    footer .footer_wrap .footer_top .footer_sns_family .sns_list {gap: 10px;}
+    footer .footer_wrap .footer_top .footer_sns_family .sns_list a {width: 24px;}
+    /* ============================================================== footer 하단 */
+    footer .footer_wrap .footer_bottom {flex-flow: column-reverse nowrap; width: 100%;}
+    footer .footer_wrap .footer_bottom .footer_left {gap: 10px;}
+    /* ====================================================메뉴 */
+    footer .footer_wrap .footer_bottom .footer_left .footer_menu {gap: 10px; width: max-content;}
+    footer .footer_wrap .footer_bottom .footer_left .footer_menu li::after {
+        width:1px; height: 9px;
+        right: -6px; top: 1px;
+    }
+    footer .footer_wrap .footer_bottom .footer_left .footer_menu li a {font-size: var(--font-size-xs-m);
+    }
+    /* ====================================================address */
+    footer .footer_wrap .footer_bottom .footer_left .company_info p:nth-child(4) {margin-bottom: 10px;}
+    footer .footer_wrap .footer_bottom .footer_left .company_info * {font-size: var(--font-size-xxs-m);
+    }
+    footer .footer_wrap .footer_bottom .footer_left .company_info .copyright {
+        font-size: var(--font-size-xs-m);
+    }
+    /* ==================================================== cs센터 */
+    footer .footer_wrap .footer_bottom .cs_center {
+        display: flex; flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    footer .footer_wrap .footer_bottom .cs_center h3 {font-size: var(--font-size-lg-m);}
+    footer .footer_wrap .footer_bottom .cs_center .phone_num * {font-size: var(--font-size-md-m);}
+    footer .footer_wrap .footer_bottom .cs_center .phone_num p {width: 120px;}
+    footer .footer_wrap .footer_bottom .cs_center .phone_num .tel {margin-bottom: 3px;}
+    footer .footer_wrap .footer_bottom .cs_center .phone_num .fax {}
+    footer .footer_wrap .footer_bottom .cs_center .hour {}
+    footer .footer_wrap .footer_bottom .cs_center .hour * {font-size: var(--font-size-md-m);}
+    footer .footer_wrap .footer_bottom .cs_center .hour p {}
+    footer .footer_wrap .footer_bottom .cs_center .hour p:nth-child(1) {margin-bottom: 3px;}
+
+        /* ====================================================== CTA */
+    #top_btn {
+        position: fixed; right: 40px; bottom: 40px;
+        width: 36px; height: 36px;
+    }
+    #top_btn img {
+        width: 32px;
+        display: block;
+    }
+    #top_btn span {
+        font-size: var(--font-size-md-m);
+    }
 }

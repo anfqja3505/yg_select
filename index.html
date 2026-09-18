@@ -155,7 +155,7 @@
             <div class="swiper hero_bnr">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <a href="#" class="flex_row_c_s">                           
+                        <a href="#" class="hero_bnr1 flex_row_c_s">                           
                             <div class="bnr_title_wrap1">
                                 <p>TREASURE THE STAGE 2026</p>
                                 <h3>THE WAV:LIVE</h3>
@@ -163,10 +163,10 @@
                         </a>
                     </div>
                     <div class="swiper-slide"><!-- 추가예정 -->
-                        <a href="#">
+                        <a href="#" class="hero_bnr2 flex_row_c_s">
                             <div class="bnr_title_wrap2">
-                                <p>TREASURE THE STAGE 2026</p>
-                                <h3>THE WAV:LIVE</h3>
+                                <p>BABYMONSTER DIGITAL SINGLE</p>
+                                <h3>SUGAR HONEY ICE TEA</h3>
                             </div>
                         </a>
                     </div>
@@ -266,6 +266,8 @@
                 <div class="swiper best_detail">
                     <ul class="swiper-wrapper"><!-- js 복제 및 추가 --></ul>
                 </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
         </section><!-- e:best_sec(베스트) -->
         <!-- 6행 이벤트 -->
@@ -274,14 +276,89 @@
                 <h2>EVENT</h2>
                 <div class="swiper event_slide">
                     <ul class="swiper-wrapper">
-                        <li class="swiper-slide"><!-- js 추가 예정 --></li>
+                        <li class="swiper-slide view_all"><!-- 더보기 -->
+                            <a href="#">
+                                <p class="view_all_img flex_row_c_c">+</p>
+                                <h3>VIEW ALL &gt;</h3>
+                            </a>
+                        </li>
+                        <!-- js 추가 예정 -->
                     </ul>
                 </div>
+                <div class="swiper-scrollbar"></div>
             </div>
+        </section>
+        <section id="slogan">
+            
         </section>
     </main>
     <footer><!-- =============================== 푸터 영역 -->
-
+        <div class="footer_wrap">
+            <div class="footer_top flex_row_b_c">
+                <h1 class="footer_logo">
+                    <a href="#"><img src="./images/logo/f_logo_black.png" alt="YG Logo"></a>
+                </h1>
+                <div class="footer_sns_family flex_row_b_c">
+                    <div class="family_site_wrap">
+                        <select name="family_select" id="family_select">
+                            <option value="">Family Site</option>
+                        </select>
+                    </div>
+                    <div class="sns_list flex_row_c_c">
+                        <a href="#" class="instagram"><img src="./images/sns/instagram.svg" alt="ygselect_instagram"></a>
+                        <a href="#" class="facebook"><img src="./images/sns/facebook.svg" alt="ygselect_facebook"></a>
+                        <a href="#" class="youTube"><img src="./images/sns/youtube.svg" alt="ygselect_YouTube"></a>
+                        <a href="#" class="x"><img src="./images/sns/x.svg" alt="ygselect_X"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_bottom flex_row_b_c">
+                <div class="footer_left flex_col_s_s">
+                    <ul class="footer_menu flex_row_s_c">
+                        <li><a href="#">MD 제작 제안</a></li>
+                        <li><a href="#">회사소개</a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">사업자정보확인</a></li>
+                        <li><a href="#">파트너사 제휴제안</a></li>
+                    </ul>
+                    <address class="company_info">
+                        <p>
+                            <span>회사명 : ㈜와이지플러스</span>
+                            <span>대표 : 최성준</span>
+                            <span>사업자등록번호 : 120-81-67338</span>
+                            <a href="#">[사업자정보확인]</a>
+                        </p>
+                        <p>
+                            <span>주소 : 04047 서울 마포구 어울마당로5길 41 (서교동)</span>
+                            <span>통신판매 신고번호 : 2022-서울영등포-3059</span>
+                        </p>
+                        <p>
+                            교환/반품 주소 : 22015 인천광역시 연수구 인천타워대로599번길 60 4층 8번 도크 YG PLUS /YG SELECT
+                        </p>
+                        <p>
+                            결제대금예치업 등록번호 : 02-006-00001 | 호스팅서비스 제공자 : 카페24(주)
+                        </p>
+                        <p class="copyright">YG SELECT의 모든 콘텐츠는 저작권의 보호를 받고 있습니다</p>
+                    </address>
+                </div>
+                <div class="cs_center flex_col_b_e">
+                    <h3>CALL CENTER</h3>
+                    <div class="phone_num">
+                        <p class="tel flex_row_b_c">TEL<span>02-3140-4686</span></p>
+                        <p class="fax flex_row_b_c">FAX<span>02-794-3409</span></p>
+                    </div>
+                    <div class="hour">
+                        <p>평일 AM 10:00~PM 5:00</p>
+                        <p>점심 PM 12:00~PM 1:00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
+    <a href="#" id="top_btn">
+        <span>TOP</span>
+        <img src="./images/logo/f_logo_black.png" alt="TOP">
+    </a>
 </body>
 </html>

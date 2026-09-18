@@ -129,38 +129,38 @@ const bestDB = [
 const eventDB = [
     {
         id: 1,
-        src: "./images/event/event1.jpg",
-        title: "[TREASURE] TRAVEL COLLECTION / SPECIAL MD",
+        src: "./images/event/event1.png",
+        title: "TREASURE [TRAVEL COLLECTION] OFFICIAL MERCH",
         link: "#"
     },
     {
         id: 2,
         src: "./images/event/event2.jpg",
-        title: "BABYMONSTER 3RD MINI ALBUM [DRIP] CHOOM",
+        title: "BABYMONSTER 3rd MINI ALBUM [춤(CHOOM)] OFFICIAL",
         link: "#"
     },
     {
         id: 3,
         src: "./images/event/event3.jpg",
-        title: "TREASURE 4TH MINI ALBUM [NEW WAV] OFFICIAL MERCH",
+        title: "TREASURE 4th MINI ALBUM [NEW WAV] OFFICIAL MERCH",
         link: "#"
     },
     {
         id: 4,
         src: "./images/event/event4.jpg",
-        title: "BABYMONSTER WORLD TOUR [HELLO MONSTERS] IN SEOUL OFFICIAL MERCH",
+        title: "BABYMONSTER WORLD TOUR [춤 (CHOOM)] IN SEOUL OFFICIAL MERCH",
         link: "#"
     },
     {
         id: 5,
         src: "./images/event/event5.jpg",
-        title: "[TREASURE] EVERYDAY, YOUR WAY / OFFICIAL MERCH",
+        title: "[TREASURE20] OFFICIAL MERCH",
         link: "#"
     },
     {
         id: 6,
         src: "./images/event/event6.jpg",
-        title: "[EVENT] 6TH ITEM TITLE",
+        title: "BABYMONSTER [SUGAR HONEY ICE TEA] OFFICIAL MERCH",
         link: "#"
     }
 ];
