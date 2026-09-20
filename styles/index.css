@@ -6,8 +6,9 @@ html, body{
 }
 /* ==========================================================(아래)헤더 */
 header {
+    width: 100%;
     background: #fff;
-    position: sticky; top: 0;
+    position: fixed; top: 0;
     z-index: 500;
     display: flex;
     padding: 18.5px 40px;
@@ -664,7 +665,17 @@ main #event_sec .event_wrap .swiper-scrollbar-drag {
 }
 
 /* ===================================================================== 슬로건  */
-
+main #slogan_sec {background: #111;}
+main #slogan_sec .slogan_wrap {padding: 350px 100px; gap: 30px;}
+main #slogan_sec .slogan_wrap .slogan_logo_wrap {}
+main #slogan_sec .slogan_wrap .slogan_logo_wrap .logo_bg {}
+main #slogan_sec .slogan_wrap .slogan_logo_wrap .slogan_logo {width: 630px; height: 308px;}
+main #slogan_sec .slogan_wrap .slogan_logo_wrap .slogan_logo img {width: 100%;}
+main #slogan_sec .slogan_wrap .slogan_text {gap: 10px;}
+main #slogan_sec .slogan_wrap .slogan_text * {color: #fff;}
+main #slogan_sec .slogan_wrap .slogan_text .slogan_main {}
+main #slogan_sec .slogan_wrap .slogan_text .slogan_main span{font-size: 5.313rem; font-weight: 900; line-height: 0.95;}
+main #slogan_sec .slogan_wrap .slogan_text p {font-size: var(--font-size-xl-d); font-weight: var(--font-weight-light);}
 
 /* ===================================================================== footer */
 footer {padding: 0 140px;}

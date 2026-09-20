@@ -97,7 +97,6 @@ gsap.fromTo('#aritst_sec h2',
         scrollTrigger:{
             trigger:'#aritst_sec',
             start:'top 70%',
-            markers:true,
         }
     }
 )
@@ -113,10 +112,24 @@ gsap.fromTo('#new_sec h2',
         scrollTrigger:{
             trigger:'#new_sec',
             start:'top 70%',
-            markers:true,
         }
     }
 )
+
+gsap.fromTo("#line_bnr_sec h2, #line_bnr_sec .bnr_details, #line_bnr_sec .buy_now, #line_bnr_sec .cheering_group img", 
+    { 
+        y: 30, opacity: 0 
+    },{
+        y: 0, 
+        opacity: 1, 
+        duration: 0.5, 
+        stagger: 0.2, 
+        scrollTrigger:{
+            trigger:'#line_bnr_sec',
+            start:'top 70%',    
+        },
+    } 
+);
 
 gsap.fromTo('#best_sec h2',
     {
@@ -129,7 +142,6 @@ gsap.fromTo('#best_sec h2',
         scrollTrigger:{
             trigger:'#best_sec',
             start:'top 70%',
-            markers:true,
         }
     }
 )
@@ -145,7 +157,6 @@ gsap.fromTo('#event_sec h2',
         scrollTrigger:{
             trigger:'#event_sec',
             start:'top 80%',
-            markers:true,
         }
     }
 )
@@ -157,11 +168,10 @@ gsap.fromTo('#album_sec .album_wrap .album_bnr',
     },{
         opacity:1,
         x:0,
-        duration:0.7,
+        duration:0.8,
         scrollTrigger:{
             trigger:'#album_sec',
-            start:'top 80%',
-            markers:true,
+            start:'top 60%',
         }
     }
 )
@@ -173,11 +183,10 @@ gsap.fromTo('#album_sec .album_wrap .album_detail',
     },{
         opacity:1,
         x:0,
-        duration:0.7,
+        duration:0.8,
         scrollTrigger:{
             trigger:'#album_sec',
-            start:'top 90%',
-            markers:true,
+            start:'top 60%',
         }
     }
 )
