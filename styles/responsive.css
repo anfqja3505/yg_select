@@ -594,7 +594,14 @@
     main #event_sec .event_wrap .swiper-scrollbar {width: 150px;}
 
     /* ===================================================================== 슬로건  */
-    main #slogan_sec .slogan_wrap {padding: 150px 15px; gap: 30px; flex-flow: column-reverse nowrap;}
+    main #slogan_sec {height: 100vh; position: relative;}
+    main #slogan_sec .slogan_wrap {
+        gap: 30px;
+        flex-flow: column-reverse nowrap;
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+    }
     main #slogan_sec .slogan_wrap .slogan_logo_wrap .logo_bg {}
     main #slogan_sec .slogan_wrap .slogan_logo_wrap .slogan_logo {width: 340px; height: 166px;}
     main #slogan_sec .slogan_wrap .slogan_logo_wrap .slogan_logo img {width: 100%;}

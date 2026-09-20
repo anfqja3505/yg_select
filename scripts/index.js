@@ -191,6 +191,33 @@ gsap.fromTo('#album_sec .album_wrap .album_detail',
     }
 )
 
+const tl = gsap.timeline({
+    scrollTrigger: {
+        trigger: "#slogan_sec",
+        pin: true,
+        start: "top top",
+        end: "+=1500",
+        scrub: 1
+    }
+});
+tl.from("#slogan_sec .slogan_logo_wrap", { 
+    scale: 2.8, 
+    opacity: 0, 
+    duration: 2,
+})
+    .from("#slogan_sec .slogan_main span", { 
+        x: -80, 
+        opacity: 0, 
+        stagger: 0.2, 
+        duration: 1,
+    }, "-=0.5")
+    .from("#slogan_sec .slogan_sub", { 
+        x: -50, 
+        opacity: 0, 
+        duration: 1, 
+    }, "-=0.4")
+    .to({}, { duration: 1 });
+
 window.addEventListener('load', function() {
     setTimeout(function() {
         if (artistSwiper && artistSwiper.autoplay) {

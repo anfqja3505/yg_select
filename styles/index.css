@@ -514,12 +514,14 @@ main #album_sec .album_wrap .album_detail .album_title_img .lp {
     width: 420px;
     position: absolute; top: 81px; left: 235px;
     z-index: 100;
+    animation: lpPop 1s ease forwards;
 
 
 }
 main #album_sec .album_wrap .album_detail .album_title_img .lp img {
     width: 100%;
     animation: spin_lp 12s linear infinite;
+    animation-delay: 1s;
     transform-origin: center center;
 }
 
@@ -668,7 +670,6 @@ main #event_sec .event_wrap .swiper-scrollbar-drag {
 main #slogan_sec {background: #111;}
 main #slogan_sec .slogan_wrap {padding: 350px 100px; gap: 30px;}
 main #slogan_sec .slogan_wrap .slogan_logo_wrap {}
-main #slogan_sec .slogan_wrap .slogan_logo_wrap .logo_bg {}
 main #slogan_sec .slogan_wrap .slogan_logo_wrap .slogan_logo {width: 630px; height: 308px;}
 main #slogan_sec .slogan_wrap .slogan_logo_wrap .slogan_logo img {width: 100%;}
 main #slogan_sec .slogan_wrap .slogan_text {gap: 10px;}
