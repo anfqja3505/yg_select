@@ -394,11 +394,18 @@
     header .menu_right .icon_menu .search_popup .search_input_recent .search_input input {} /* 검색창 */
     header .menu_right .icon_menu .search_popup .search_input_recent .search_recent #recent_delete {font-size: var(--font-size-md-m);}
     /* =========================================== 히어로배너 */
+    /* =============================================================1번째 */
     main #hero_sec .hero_bnr .swiper-wrapper .swiper-slide {height: 700px;}
-    main #hero_sec .hero_bnr .swiper-wrapper .swiper-slide .hero_bnr1 {background-image: url('../images/hero/hero_m.png');}
+    main #hero_sec .hero_bnr .swiper-wrapper .swiper-slide .hero_bnr1 {background-image: url('../images/hero/hero1_m.png');}
     main #hero_sec .hero_bnr .swiper-wrapper .swiper-slide .hero_bnr1 .bnr_title_wrap1 {top: 70px;}
     main #hero_sec .hero_bnr .swiper-wrapper .swiper-slide .hero_bnr1 .bnr_title_wrap1 h3 {font-size: 2.625em;}
     main #hero_sec .hero_bnr .swiper-wrapper .swiper-slide .hero_bnr1 .bnr_title_wrap1 p {font-size: 1.25em;}
+    /* =============================================================2번째 */
+    main #hero_sec .hero_bnr .swiper-wrapper .swiper-slide {height: 700px;}
+    main #hero_sec .hero_bnr .swiper-wrapper .swiper-slide .hero_bnr2 {background-image: url('../images/hero/hero2_m.png');}
+    main #hero_sec .hero_bnr .swiper-wrapper .swiper-slide .hero_bnr2 .bnr_title_wrap2 {top: 10px; left: 50%}
+    main #hero_sec .hero_bnr .swiper-wrapper .swiper-slide .hero_bnr2 .bnr_title_wrap2 h3 {font-size: 2.625em;}
+    main #hero_sec .hero_bnr .swiper-wrapper .swiper-slide .hero_bnr2 .bnr_title_wrap2 p {font-size: 1.25em;}
         /* ===================================================아티스트 */
     main #aritst_sec {}
     main #aritst_sec .artist_wrap {padding: 70px 0;}

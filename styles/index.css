@@ -203,19 +203,19 @@ main #hero_sec {}
 main #hero_sec .hero_bnr {}
 main #hero_sec .hero_bnr .swiper-wrapper {}
 main #hero_sec .hero_bnr .swiper-wrapper .swiper-slide {
-    height: 900px;
+    height: 100vh;
 }
 main #hero_sec .hero_bnr .swiper-wrapper .swiper-slide .hero_bnr1 {
     display: block;
     height: 100%;
     position: relative;
-    background-image: url('../images/hero/hero4.png'); 
+    background-image: url('../images/hero/hero1.png'); 
     background-repeat: no-repeat;
     background-size: cover;       
     background-position: center; 
 }
 main #hero_sec .hero_bnr .swiper-wrapper .swiper-slide .hero_bnr1 .bnr_title_wrap1 {
-    position: absolute; top: 0; left: 50%; 
+    position: absolute; top: 40px; left: 50%; 
     transform: translate(-50%, 100px);
     text-align: center;
 }
@@ -251,11 +251,10 @@ main #hero_sec .hero_bnr .swiper-wrapper .swiper-slide .hero_bnr2 {
     background-position: center; 
 }
 main #hero_sec .hero_bnr .swiper-wrapper .swiper-slide .hero_bnr2 .bnr_title_wrap2 {
-    position: absolute; top: 0; left: 50%; 
+    position: absolute; top: 30px; left: 30%; 
     transform: translate(-50%, 100px);
     text-align: center;
 }
-/* main #hero_sec .hero_bnr .swiper-wrapper .swiper-slide .hero_bnr2 .bnr_title_wrap2 * {color: #fff;} */
 main #hero_sec .hero_bnr .swiper-wrapper .swiper-slide .hero_bnr2 .bnr_title_wrap2 p {
     opacity: 0;
     transform: translateY(-30px);
@@ -263,17 +262,19 @@ main #hero_sec .hero_bnr .swiper-wrapper .swiper-slide .hero_bnr2 .bnr_title_wra
     font-size: 2rem; font-weight: var(--font-weight-bold);
 }
 main #hero_sec .hero_bnr .swiper-wrapper .swiper-slide .hero_bnr2 .bnr_title_wrap2 h3 {
-    font-weight: var(--font-weight-bold);
+    font-weight: 900;
     font-family: 'Noto Serif KR';
-    font-size: 5em;
+    font-size: 4em;
     opacity: 0;
     transform: translateY(-30px);
     transition: all 1s ease;
+    margin-bottom: 30px;
 }
 main #hero_sec .hero_bnr .swiper-wrapper .swiper-slide-active .hero_bnr2 .bnr_title_wrap2 p,
 main #hero_sec .hero_bnr .swiper-wrapper .swiper-slide-active .hero_bnr2 .bnr_title_wrap2 h3 {
     opacity: 1;
     transform: translateY(0);
+    color: #fff;
 }
 /* =============================================== 2행 아티스트 */
 main #aritst_sec {}
@@ -299,6 +300,7 @@ main #aritst_sec .artist_wrap .artist_swiper .swiper-wrapper .swiper-slide a img
     width: 100%; height: 500px;
     margin-bottom: 20px; 
     object-fit: cover;
+
 }
 main #aritst_sec .artist_wrap .artist_swiper .swiper-wrapper .swiper-slide a h3 {font-size: var(--font-size-xl-d);}
 
@@ -417,7 +419,21 @@ main #new_sec .new_wrap .new_content_wrap .new_content .new_product_list {
 main #new_sec .new_wrap .new_content_wrap .new_content.active .new_product_list {transform: translateX(0); display: flex; flex-flow: row wrap;}
 main #new_sec .new_wrap .new_content_wrap .new_content .new_product_list li {flex: 0 0 calc(33.333% - 14px); min-width: 0;}
 main #new_sec .new_wrap .new_content_wrap .new_content .new_product_list li a {width: 100%;}
-main #new_sec .new_wrap .new_content_wrap .new_content .new_product_list li a .new_thum {width: 100%; margin-bottom: 10px;}
+main #new_sec .new_wrap .new_content_wrap .new_content .new_product_list li a .new_thum {width: 100%; margin-bottom: 10px; position: relative; overflow: hidden;}
+main #new_sec .new_wrap .new_content_wrap .new_content .new_product_list li a .new_thum::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+main #new_sec .new_wrap .new_content_wrap .new_content .new_product_list li:hover a .new_thum::after {
+    opacity: 1;
+}
 main #new_sec .new_wrap .new_content_wrap .new_content .new_product_list li a .new_thum img {width: 100%;}
 main #new_sec .new_wrap .new_content_wrap .new_content .new_product_list li a .new_name {
     font-weight: var(--font-weight-light);
@@ -604,7 +620,24 @@ main #best_sec .best_wrap .best_detail .swiper-wrapper .artist_best_wrap .best_b
 }
 main #best_sec .best_wrap .best_detail .swiper-wrapper .artist_best_wrap .best_product {gap: 10px;}
 main #best_sec .best_wrap .best_detail .swiper-wrapper .artist_best_wrap .best_product .product_info {flex: 1; display: block; min-width: 0;} 
-main #best_sec .best_wrap .best_detail .swiper-wrapper .artist_best_wrap .best_product .product_info .best_thum {width: 100%; height:100%; margin-bottom: 12px;}
+main #best_sec .best_wrap .best_detail .swiper-wrapper .artist_best_wrap .best_product .product_info .best_thum {
+    width: 100%; height: 100%; 
+    margin-bottom: 12px;  
+    overflow: hidden;
+    position: relative;
+}
+main #best_sec .best_wrap .best_detail .swiper-wrapper .artist_best_wrap .best_product .product_info .best_thum::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+}
+main #best_sec .best_wrap .best_detail .swiper-wrapper .artist_best_wrap .best_product .product_info:hover .best_thum::after {opacity: 1}
 main #best_sec .best_wrap .best_detail .swiper-wrapper .artist_best_wrap .best_product .product_info .best_thum img {width: 100%; height:100%; background: #fff;}
 main #best_sec .best_wrap .best_detail .swiper-wrapper .artist_best_wrap .best_product .product_info .best_name {
     font-weight: var(--font-weight-light);
